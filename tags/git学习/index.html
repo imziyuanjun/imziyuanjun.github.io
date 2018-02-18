@@ -22,7 +22,7 @@
 <meta name="verify" content=all />
     <!--Title-->
 
-<title>Hello World | 笔筒虫的博客</title>
+<title>标签: git学习 | 笔筒虫的博客</title>
 
 <link rel="alternate" href="/atom.xml" title="笔筒虫的博客" type="application/atom+xml">
 
@@ -31,10 +31,9 @@
 
     
 <link rel="stylesheet" href="/css/base.css">
-<link rel="stylesheet" href="/css/pages/post.css">
+<link rel="stylesheet" href="/css/pages/archive.css">
 <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/css/thirdParty/highlight/github.css">
-<link rel="stylesheet" href="/css/pages/comments.css">
 
     <!--script-->
 
@@ -56,23 +55,6 @@
 
 <!--<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>-->
 
-
-<script src="/js/thirdParty/gitment.browser.min.js"></script>
-<script>
-  var labels = "blog,gitment";
-  labels = labels.split(",");
-  var gitment = new Gitment({
-    id: window.location.pathname,
-    owner: "bitongchong",
-    repo: "bitongchong.github.io",
-    oauth: {
-      client_id: "000b7049a8642b44ad6b",
-      client_secret: "ed50a5c0c4c3782d54c68d3bd75e7394846f628e"
-    },
-    perPage: "20",
-    labels: labels
-  });
-</script>
 
     
     
@@ -163,15 +145,14 @@
 
 
         <div id="main">
-    <article id="post">
-        <div id="post-header">
-
-            <h1 id="Hello World">
+    <div id="post-list">
+        <ul class="archives-post-list">
+            
+            <li class="post-items" _href="/2018/02/18/廖雪峰git笔记/">
                 
-                Hello World
-                
-            </h1>
-            <div class="article-meta">
+                <p class="info">git学习</p>
+                <h2 class="post-item-title">廖雪峰git学习笔记</h2>
+                <div class="article-meta">
     
     
     <span class="categories-meta fa-wrap">
@@ -179,15 +160,6 @@
         <span>null</span>
     </span>
     
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            null
-            
-        </span>
-    </span>
     
     
     <span class="fa-wrap">
@@ -198,95 +170,20 @@
     
     <span class="fa-wrap">
             <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="Hello World"
-              data-leadcloud-url="/2018/02/18/hello-world/"><i class="fa fa-spinner fa-spin"></i></span>
+        <span class="hits hits-meta " data-leadcloud-title="廖雪峰git学习笔记"
+              data-leadcloud-url="/2018/02/18/廖雪峰git笔记/"><i class="fa fa-spinner fa-spin"></i></span>
     </span>
     
     
 </div>
 
+            </li>
             
-            
-        </div>
-        
-        <div id="post-body">
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-        </div>
-        <div id="post-footer">
-            <div class="avatar" >
-                <img src="http://ww1.sinaimg.cn/large/006vT9TSly1foky6pf7lvj30dw0dwaaf.jpg" alt="avatar"/>
-                
-                
-                <a href="javascript:void(0)" class="donate fa">赠我一杯 &#128536;</a>
-                
-            </div>
-            <ul class="author-profile-section">
-                <li>
-                  
-                  作者:
-                  
-                    
-                    <a href="/about.html">bit c</a>
-                </li>
-                
-                <li>发表日期: <span>2018-02-18  14:18:17</span></li>
-                
-                <li>最后编辑日期: <span>2018-02-18  14:18:17</span></li>
-                
-                <li class="post-category">
-                    文章分类:
-                    
-                </li>
-                <li class="post-tags">
-                    文章标签:
-                    
-                </li>
-                
-                <li> 版权声明: <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">
-知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议（CC BY-NC-ND 3.0）
-</a></li>
-                
-            </ul>
-            <div id="donate-wrap">
-                
-                
-                
-                <img src="http://ww1.sinaimg.cn/large/006vT9TSly1foky01e4vpj30qp0p5jsj.jpg" alt="支付宝付款" class="donate-img">
-                
-                <img src="http://ww1.sinaimg.cn/large/006vT9TSly1foky0c4zpsj30ry0tywgw.jpg" alt="微信付款" class="donate-img">
-                
-                
-            </div>
-        </div>
-    </article>
-    <div class="article-nav">
-        
-        <a href="/2018/02/18/Hello-blog/" class="pre-post fa fa-caret-left">Hello blog</a>
-        
-        
+        </ul>
     </div>
-    
-    <div id="comments">
-        
-
-<script>
-  gitment.render(document.getElementById("comments"));
-</script>
-
-
-
-    </div>
-    
 </div>
+
+
 
 
     </div>
@@ -323,14 +220,8 @@
     <li class="totop-btn fa fa-angle-up"></li>
     <li class="exchange-btn fa fa-exchange"></li>
   
-    <li class="toc-btn fa fa-list-ul"></li>
-    
     
 
-    
-    <li class="comment-btn fa fa-comments-o">
-        <a href="#comments" title="comments"></a>
-    </li>
     
 </ul>
 <p id="process"></p>
@@ -348,8 +239,6 @@
         </div>
     </div>
 </div>
-
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
 
 
 
