@@ -4,7 +4,7 @@
     
     <entry>
         <title><![CDATA[廖雪峰git学习笔记]]></title>
-        <url>http://yoursite.com/2018/02/18/%E5%BB%96%E9%9B%AA%E5%B3%B0git%E7%AC%94%E8%AE%B0/</url>
+        <url>http://yoursite.com/2018/02/18/2018219949/</url>
         <content type="html"><![CDATA[<h2 id="Git介绍"><a href="#Git介绍" class="headerlink" title="Git介绍"></a>Git介绍</h2><ul>
 <li>Git是分布式版本控制系统</li>
 <li>集中式VS分布式，SVN VS Git<br>1）SVN和Git主要的区别在于历史版本维护的位置<br>2）这两个工具主要的区别在于历史版本维护的位置Git本地仓库包含代码库还有历史库，在本地的环境开发就可以记录历史而SVN的历史库存在于中央仓库，每次对比与提交代码都必须连接到中央仓库才能进行。<br>3）这样的好处在于：<ul>
