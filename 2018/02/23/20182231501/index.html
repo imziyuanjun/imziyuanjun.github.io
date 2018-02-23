@@ -22,7 +22,7 @@
 <meta name="verify" content=all />
     <!--Title-->
 
-<title>分类: GIT | BITC＇BLOG</title>
+<title>win10操作小技巧（逐渐补充） | BITC＇BLOG</title>
 
 <link rel="alternate" href="/atom.xml" title="BITC＇BLOG" type="application/atom+xml">
 
@@ -31,9 +31,10 @@
 
     
 <link rel="stylesheet" href="/css/base.css">
-<link rel="stylesheet" href="/css/pages/archive.css">
+<link rel="stylesheet" href="/css/pages/post.css">
 <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/css/thirdParty/highlight/github.css">
+<link rel="stylesheet" href="/css/pages/comments.css">
 
     <!--script-->
 
@@ -55,6 +56,23 @@
 
 <!--<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>-->
 
+
+<script src="/js/thirdParty/gitment.browser.min.js"></script>
+<script>
+  var labels = "blog,gitment";
+  labels = labels.split(",");
+  var gitment = new Gitment({
+    id: window.location.pathname,
+    owner: "bitongchong",
+    repo: "bitongchong.github.io",
+    oauth: {
+      client_id: "000b7049a8642b44ad6b",
+      client_secret: "ed50a5c0c4c3782d54c68d3bd75e7394846f628e"
+    },
+    perPage: "20",
+    labels: labels
+  });
+</script>
 
     
     
@@ -152,21 +170,28 @@ title="fork me" target="_blank">笔筒虫</a></p>
 
 
         <div id="main">
-    <div id="post-list">
-        <ul class="archives-post-list">
-            
-            <li class="post-items" _href="/2018/02/18/2018219949/">
+    <article id="post">
+        <div id="post-header">
+
+            <h1 id="win10操作小技巧（逐渐补充）">
                 
-                <p class="info">GIT</p>
-                <h2 class="post-item-title">廖雪峰git学习笔记</h2>
-                <div class="article-meta">
+                win10操作小技巧（逐渐补充）
+                
+            </h1>
+            <div class="article-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+        <span>win10操作</span>
+    </span>
     
     
     <span class="fa-wrap">
          <i class="fa fa-tags"></i>
         <span class="tags-meta">
             
-            git学习
+            win10
             
         </span>
     </span>
@@ -174,28 +199,99 @@ title="fork me" target="_blank">笔筒虫</a></p>
     
     <span class="fa-wrap">
         <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">2018/02/18</span>
+        <span class="date-meta ">2018/02/23</span>
     </span>
     
     
     <span class="fa-wrap">
             <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="廖雪峰git学习笔记"
-              data-leadcloud-url="/2018/02/18/2018219949/"><i class="fa fa-spinner fa-spin"></i></span>
+        <span class="hits hits-meta " data-leadcloud-title="win10操作小技巧（逐渐补充）"
+              data-leadcloud-url="/2018/02/23/20182231501/"><i class="fa fa-spinner fa-spin"></i></span>
     </span>
     
     
 </div>
 
-            </li>
             
-        </ul>
+            
+        </div>
+        
+        <div id="post-body">
+            <p>Ctrl+z撤销操作</p>
+<p>Ctrl+r回复操作</p>
+<p>win+ctrl+d新建虚拟桌面</p>
+
+        </div>
+        <div id="post-footer">
+            <div class="avatar" >
+                <img src="http://ww1.sinaimg.cn/large/006vT9TSly1foky6pf7lvj30dw0dwaaf.jpg" alt="avatar"/>
+                
+                
+                <a href="javascript:void(0)" class="donate fa">赠我一杯 &#128536;</a>
+                
+            </div>
+            <ul class="author-profile-section">
+                <li>
+                  
+                  作者:
+                  
+                    
+                    <a href="/about.html">BIT C</a>
+                </li>
+                
+                <li>发表日期: <span>2018-02-23  15:06:06</span></li>
+                
+                <li>最后编辑日期: <span>2018-02-23  15:06:07</span></li>
+                
+                <li class="post-category">
+                    文章分类:
+                    
+                    <a href="/categories/win10操作/">win10操作</a>
+                    
+                </li>
+                <li class="post-tags">
+                    文章标签:
+                    
+                    <a href="/tags/win10/">win10</a>
+                    
+                </li>
+                
+                <li> 版权声明: <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">
+知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议（CC BY-NC-ND 3.0）
+</a></li>
+                
+            </ul>
+            <div id="donate-wrap">
+                
+                
+                
+                <img src="http://ww1.sinaimg.cn/large/006vT9TSly1foky01e4vpj30qp0p5jsj.jpg" alt="支付宝付款" class="donate-img">
+                
+                <img src="http://ww1.sinaimg.cn/large/006vT9TSly1foky0c4zpsj30ry0tywgw.jpg" alt="微信付款" class="donate-img">
+                
+                
+            </div>
+        </div>
+    </article>
+    <div class="article-nav">
+        
+        
+        <a href="/2018/02/23/20182231452/" class="next-post fa">关于在Ubuntu16.04上部署open-edx-ginkgo的流程与注意事项</a>
+        
     </div>
+    
+    <div id="comments">
+        
+
+<script>
+  gitment.render(document.getElementById("comments"));
+</script>
+
+
+
+    </div>
+    
 </div>
-
-
-
-
 
 
     </div>
@@ -232,8 +328,14 @@ title="fork me" target="_blank">笔筒虫</a></p>
     <li class="totop-btn fa fa-angle-up"></li>
     <li class="exchange-btn fa fa-exchange"></li>
   
+    <li class="toc-btn fa fa-list-ul"></li>
+    
     
 
+    
+    <li class="comment-btn fa fa-comments-o">
+        <a href="#comments" title="comments"></a>
+    </li>
     
 </ul>
 <p id="process"></p>
@@ -251,6 +353,8 @@ title="fork me" target="_blank">笔筒虫</a></p>
         </div>
     </div>
 </div>
+
+    
 
 
 

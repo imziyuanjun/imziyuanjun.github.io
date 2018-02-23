@@ -3,6 +3,29 @@
     
     
     <entry>
+        <title><![CDATA[win10操作小技巧（逐渐补充）]]></title>
+        <url>http://yoursite.com/2018/02/23/20182231501/</url>
+        <content type="html"><![CDATA[<p>Ctrl+z撤销操作</p>
+<p>Ctrl+r回复操作</p>
+<p>win+ctrl+d新建虚拟桌面</p>
+]]></content>
+        
+        <categories>
+            
+            <category> win10操作 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> win10 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
         <title><![CDATA[关于在Ubuntu16.04上部署open-edx-ginkgo的流程与注意事项]]></title>
         <url>http://yoursite.com/2018/02/23/20182231452/</url>
         <content type="html"><![CDATA[<h1 id="关于在Ubuntu16-04上部署open-edx-ginkgo的流程与注意事项"><a href="#关于在Ubuntu16-04上部署open-edx-ginkgo的流程与注意事项" class="headerlink" title="关于在Ubuntu16.04上部署open-edx-ginkgo的流程与注意事项"></a><strong>关于在Ubuntu16.04上部署open-edx-ginkgo的流程与注意事项</strong></h1><p>现在网上很多关于edx框架安装的教程都有很多坑，对新手极其不友好。</p>
