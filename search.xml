@@ -227,6 +227,10 @@
 <li>设置时切记 : 后面要加一个空格。</li>
 <li>最后再重新进行一次，hexo clean,hexo g,hexo s,hexo deploy 整个博客就完成主题修改啦</li>
 </ol>
+<h3 id="八、其他问题"><a href="#八、其他问题" class="headerlink" title="八、其他问题"></a>八、其他问题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;</span><br><span class="line">url: https://yoursite.com</span><br><span class="line">root: /</span><br><span class="line">permalink: :year/:month/:day/:subtitle/</span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure>
+<p>在配置文件中，这一栏需要改为自己的网址，否则会出现搜索功能不能使用等问题。</p>
+<p>比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;</span><br><span class="line">url: https://bitongchong.github.io</span><br><span class="line">root: /</span><br><span class="line">permalink: :year/:month/:day/:subtitle/</span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure>
 ]]></content>
         
         <categories>
