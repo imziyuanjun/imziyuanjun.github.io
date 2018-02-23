@@ -1,0 +1,491 @@
+<!doctype html>
+<html>
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable"  content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no">
+    
+    
+    <!--Simple SEO-->
+
+<meta name="description" content=个人笔记与资源分享/>
+
+
+<meta name="robots" content=all />
+<meta name="google" content=all />
+<meta name="googlebot" content=all />
+<meta name="verify" content=all />
+    <!--Title-->
+
+<title>hexo+github搭建博客 | BITC＇BLOG</title>
+
+<link rel="alternate" href="/atom.xml" title="BITC＇BLOG" type="application/atom+xml">
+
+
+<link rel="icon" href="/favicon.ico">
+
+    
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/pages/post.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/thirdParty/highlight/github.css">
+<link rel="stylesheet" href="/css/pages/comments.css">
+
+    <!--script-->
+
+
+<script src="http://cdn1.lncld.net/static/js/3.2.1/av-min.js"></script>
+<script>
+  var appId = "T8Agkf9NzD89lQM1BnonkJ7Y-gzGzoHsz";
+  var appKey = "P47hlDvXycPSblIyK8utWB4q";
+  var region = "";
+  AV.init({
+    appId: appId,
+    appKey: appKey,
+    region: region
+  });
+</script>
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>-->
+
+
+<script src="/js/thirdParty/gitment.browser.min.js"></script>
+<script>
+  var labels = "blog,gitment";
+  labels = labels.split(",");
+  var gitment = new Gitment({
+    id: window.location.pathname,
+    owner: "bitongchong",
+    repo: "bitongchong.github.io",
+    oauth: {
+      client_id: "000b7049a8642b44ad6b",
+      client_secret: "ed50a5c0c4c3782d54c68d3bd75e7394846f628e"
+    },
+    perPage: "20",
+    labels: labels
+  });
+</script>
+
+    
+    
+</head>
+
+<body id="normal">
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<style>
+    header{ top: 71px; position: absolute!important;}
+    #container{padding-top: 151px!important;}
+</style>
+<div style="position:fixed;z-index:9999;left:0;top:0;width:100%;height:70px;background-color:#e0e0e0;color:#396CA5;border-bottom:1px solid #cecece;text-align:center;line-height:70px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<div id="wrap">
+    <header  style="position: absolute;" >
+    <div id="site-meta">
+        <a href="/" id="logo">
+            <h1 class="title">BITC＇BLOG</h1>
+        </a>
+        
+        <h2 class="subtitle">DO YOUR WORK</h2>
+        
+    </div>
+    <ul id="nav">
+        
+            <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
+        
+            <li><a href="/atom.xml"><i class="fa fa-rss"></i>RSS</a></li>
+        
+        <li id="search"><a href="javascript:void(0)"><i class="fa fa-search"></i>搜索</a></li>
+    </ul>
+</header>
+
+    <div id="container">
+        
+<ul id="sidebar">
+    
+    
+<li class="widget notification">
+    <i class="fa fa-bell-o"></i>
+    <div>
+        
+<p>不时更新分享一些好玩的技术与资源～～</p>
+<p>点击联系我：<a href="http://wpa.qq.com/msgrd?v=3&uin=343788619&site=qq&menu=yes"
+title="fork me" target="_blank">笔筒虫</a></p>
+    </div>
+</li>
+
+    
+    
+<li class="widget widget-normal category">
+    <h3 class="fa fa-th widget-title">分类</h3>
+    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/GIT/"><i class="fa" aria-hidden="true">GIT</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link current" href="/categories/其他技术/"><i class="fa" aria-hidden="true">其他技术</i></a><span class="category-list-count">1</span></li></ul>
+</li>
+
+
+    
+    
+<li class="widget widget-normal archive">
+  <h3 class="fa fa-archive widget-title">归档</h3>
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/"><i class="fa" aria-hidden="true">二月 2018</i></a><span class="archive-list-count">2</span></li></ul>
+</li>
+
+
+    
+    
+<li class="widget widget-normal popular-posts" id="popular-posts">
+    <h3 class="fa fa-thermometer-3 widget-title">热门文章</h3>
+    <ul id="popular-content">
+        <li class="load-first"><i class="fa fa-spinner fa-pulse"></i></li>
+    </ul>
+</li>
+
+    
+    
+<li class="widget widget-normal tags">
+  <h3 class="fa fa-tags widget-title">标签云</h3>
+  <div class="tagcloud-content">
+    
+      <a href="/tags/git学习/" style="font-size: 0.14rem; color: #69c">git学习</a> <a href="/tags/博客搭建/" style="font-size: 0.14rem; color: #69c">博客搭建</a>
+  </div>
+</li>
+
+
+    
+    
+    
+</ul>
+
+
+        <div id="main">
+    <article id="post">
+        <div id="post-header">
+
+            <h1 id="hexo+github搭建博客">
+                
+                hexo+github搭建博客
+                
+            </h1>
+            <div class="article-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+        <span>其他技术</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+         <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            博客搭建
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta ">2018/02/22</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+            <i class="fa fa-thermometer-three-quarters"></i>
+        <span class="hits hits-meta " data-leadcloud-title="hexo+github搭建博客"
+              data-leadcloud-url="/2018/02/22/20180223/"><i class="fa fa-spinner fa-spin"></i></span>
+    </span>
+    
+    
+</div>
+
+            
+            
+        </div>
+        
+        <div id="post-body">
+            <h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p>前几天突然心血来潮，想搭建一个自己的博客来保存自己的学习笔记，在借鉴了几篇文章后搭建成功 。</p>
+<p>下面是详细步骤以及遇到的一些坑。<br>最终效果：<a href="https://bitongchong.github.io/" target="_blank" rel="noopener">BITC’S BLOG</a></p>
+<p>参考文章：<a href="https://zhuanlan.zhihu.com/p/32263486" target="_blank" rel="noopener">免费快速搭建博客教程，Hexo&amp;GitHub</a></p>
+<h2 id="搭建步骤："><a href="#搭建步骤：" class="headerlink" title="搭建步骤："></a><strong>搭建步骤：</strong></h2><p>###一、获得个人网站域名（可选）###</p>
+<p>阿里云注册购买一个域名，并且将之解析。</p>
+<h3 id="二、配置github"><a href="#二、配置github" class="headerlink" title="二、配置github"></a>二、配置github</h3><ol>
+<li><p>登录GitHub</p>
+</li>
+<li><p>保留Username</p>
+</li>
+<li><p>新建repositories</p>
+</li>
+<li><p>Repository name （填自己的名字） <strong><a href="http://yourname.github.io" target="_blank" rel="noopener">http://yourname.github.io</a></strong>(yourname与你的注册用户名一致,这个就是你博客的域名了。例如，我的域名是<a href="https://link.zhihu.com/?target=http%3A//github.com/wuxingggg" target="_blank" rel="noopener">http://github.com/bitongchong</a>，就填入<a href="http://bitongchong.github.io" target="_blank" rel="noopener">http://bitongchong.github.io</a>)</p>
+<p>​</p>
+</li>
+</ol>
+<h3 id="三、环境配置"><a href="#三、环境配置" class="headerlink" title="三、环境配置"></a>三、环境配置</h3><ol>
+<li><p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">安装Node.js</a></p>
+</li>
+<li><p><a href="https://github.com/waylau/git-for-win" target="_blank" rel="noopener">安装Git</a></p>
+</li>
+<li><p>安装完成后，在开始菜单里找到“Git”-&gt;“Git Bash”，进入</p>
+</li>
+<li><p>$ git config –global user.name “username”</p>
+</li>
+<li><p>$ git config –global user.email “xxx”</p>
+</li>
+<li><p>cmd中输入npm install -g hexo-cli（管理员权限）</p>
+</li>
+<li><p>(npm在你安装Node.js时就安装了)这个过程会比较久，如果出现WARN错误可以忽略。我记得当时，每次都会出现说有一个依赖包已经不更新，这个不影响。</p>
+<p>注：4、5是是两个短横线；username和xxx都是随意设置；引号需要添加</p>
+<p>​</p>
+</li>
+</ol>
+<h3 id="四、网站代码以及设置"><a href="#四、网站代码以及设置" class="headerlink" title="四、网站代码以及设置"></a>四、网站代码以及设置</h3><ol>
+<li>自己在C盘创建一个test文件夹，cmd内cd进入test文件夹（管理员权限！一定得有）</li>
+<li>输入hexo init blog（忽视WARNING）</li>
+</ol>
+<ul>
+<li>_config.yml，网站的 配置 信息，在此配置大部分参数。</li>
+<li>source，资源文件夹是存放用户资源的地方。除 <em>posts 文件夹之外，开头命名为</em> (下划线)的文件 / 文件夹和隐藏的文件将会被忽略。Markdown 和 HTML 文件会被解析并放到 public 文件夹，而其他文件会被拷贝过去。</li>
+<li>themes，主题文件夹。Hexo 会根据主题来生成静态页面。</li>
+</ul>
+<ol>
+<li>提示Start blogging with Hexo，安装成功</li>
+<li>文件夹中自带一篇文章“Hello World”</li>
+<li>命令行进入blog目录下</li>
+<li>输入hexo g，生存静态文件</li>
+<li>输入hexo s，启动服务器。默认情况下，访问网址为： <a href="https://link.zhihu.com/?target=http%3A//localhost%3A4000/" target="_blank" rel="noopener">http://localhost:4000/</a></li>
+<li>重新打开CMD，输入：ssh-keygen -t rsa -C “Github的注册邮箱地址”</li>
+</ol>
+<p>一直Enter过来，得到信息：<br>Your public key has been saved in /c/Users/user/.ssh/id_rsa.pub.</p>
+<ol>
+<li><p>找到该文件，打开（sublime text），Ctrl + a复制里面的所有内容，然后进入Sign in to GitHub：<a href="https://link.zhihu.com/?target=https%3A//github.com/settings/ssh" target="_blank" rel="noopener">https://github.com/settings/ssh</a></p>
+</li>
+<li><p>New SSH key ——Title：blog —— Key：输入刚才复制的—— Add SSH key</p>
+<p>​</p>
+</li>
+</ol>
+<h3 id="五、博客网站配置信息"><a href="#五、博客网站配置信息" class="headerlink" title="五、博客网站配置信息"></a>五、博客网站配置信息</h3><ol>
+<li>进入blog网站，用sublime打开_config.yml文件（博客基本配置信息），修改参数</li>
+<li><strong>每个参数的：后都要加一个空格</strong></li>
+<li>hexo框架的blog基础信息，按照自己设置就行</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title: BITC&apos;BLOG</span><br><span class="line">subtitle: DO YOUR WORK</span><br><span class="line">description: BIJI</span><br><span class="line">author: BITC</span><br><span class="line">language: zh-CN</span><br><span class="line">timezone: Asia/Shanghai</span><br></pre></td></tr></table></figure>
+<p>4.部署服务器的相关配置信息，只需要修改repo部分，username设置为你的username</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy: </span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/username/username.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>6.各类主题的配置信息，要在主题文件夹内的_config.yml上进行配置！</p>
+<h3 id="六、发表文章"><a href="#六、发表文章" class="headerlink" title="六、发表文章"></a>六、发表文章</h3><ol>
+<li>进入blog文件夹下，输入hexo new “Hello blog”</li>
+<li>打开info中的地址，打开文件。</li>
+<li>文章内容采用Markdown语法进行编辑，需要用相关软件才能打开这个文件</li>
+<li><a href="http://note.youdao.com/iyoudao/?p=2411&amp;vendor=unsilent14" target="_blank" rel="noopener">Markdown编辑使用说明</a></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hello blog</span><br><span class="line">date: </span><br><span class="line">tags: 测试</span><br><span class="line">---</span><br><span class="line">测试文章，欢迎关注作者博客: https://wuxingggg.github.io/</span><br><span class="line">虽然啥子都没有，以后慢慢补充</span><br></pre></td></tr></table></figure>
+<p>6.执行以下步骤</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">C:\test\blog</span><br><span class="line">$ hexo clean</span><br><span class="line">INFO  Deleted database.</span><br><span class="line">INFO  Deleted public folder.</span><br><span class="line"></span><br><span class="line">C:\test\blog</span><br><span class="line">$ hexo generate</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Files loaded in 1.48 s</span><br><span class="line">...</span><br><span class="line">INFO  29 files generated in 4.27 s</span><br><span class="line"></span><br><span class="line">C:\test\blog</span><br><span class="line">$ hexo server</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
+<p>7.<a href="https://link.zhihu.com/?target=http%3A//localhost%3A4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 打开后检查，没问题后部署到服务器上</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">C:\test\blog</span><br><span class="line">$ hexo deploy</span><br><span class="line">INFO  Deploying: git</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>其中，可能会出现github登录界面，正常填写就行</p>
+</li>
+<li><p>hexo deploy 后,出现 error deployer not found:git 的错误，输入以下代码</p>
+</li>
+<li><ul>
+<li>npm install hexo-deployer-git –save</li>
+<li>再次hexo deploy</li>
+</ul>
+</li>
+</ul>
+<h3 id="七、主题设置"><a href="#七、主题设置" class="headerlink" title="七、主题设置"></a>七、主题设置</h3><p>主题设置中，最好玩的就是尝试各式各样的主题啦~</p>
+<p><a href="https://link.zhihu.com/?target=https%3A//hexo.io/themes/" target="_blank" rel="noopener">官方hexo主题大全</a>，里面有许多主题都能尝试一下。</p>
+<p>在这里推荐几个主题：</p>
+<ul>
+<li><a href="https://link.zhihu.com/?target=http%3A//theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">next官网</a></li>
+<li><a href="https://link.zhihu.com/?target=https%3A//mt.viosey.com/" target="_blank" rel="noopener">Material官网</a>，<a href="https://link.zhihu.com/?target=https%3A//github.com/viosey/hexo-theme-material/" target="_blank" rel="noopener">Git</a></li>
+</ul>
+<ol>
+<li>主题配置，首先要下载主题，到相应的Git链接，比如，<a href="https://link.zhihu.com/?target=https%3A//github.com/viosey/hexo-theme-material/releases/tag/1.4.0" target="_blank" rel="noopener">Material</a>下载Source code (zip)</li>
+<li>下载完以后将文件解压缩后放到blog中的themes文件夹中</li>
+<li>修改主题文件夹名称，将其改为 material 。 然后打开 站点配置文件，找到 theme 字段，并将其值更改为 material</li>
+<li>手动将 material 文件夹中的 _config.template.yaml 复制一份并重命名为 _config.yaml</li>
+<li>接下来，打开主题相应的博客中的文档说明，对比“主题”中的_config.yaml，针对自己需要的功能进行相关设置</li>
+<li>有关设置中的图片，统一放到主题文件夹内\source\img。在设置中，用”/img/xigua.jpg”类似格式进行图片设置。</li>
+<li>设置时切记 : 后面要加一个空格。</li>
+<li>最后再重新进行一次，hexo clean,hexo g,hexo s,hexo deploy 整个博客就完成主题修改啦</li>
+</ol>
+
+        </div>
+        <div id="post-footer">
+            <div class="avatar" >
+                <img src="http://ww1.sinaimg.cn/large/006vT9TSly1foky6pf7lvj30dw0dwaaf.jpg" alt="avatar"/>
+                
+                
+                <a href="javascript:void(0)" class="donate fa">赠我一杯 &#128536;</a>
+                
+            </div>
+            <ul class="author-profile-section">
+                <li>
+                  
+                  作者:
+                  
+                    
+                    <a href="/about.html">BIT C</a>
+                </li>
+                
+                <li>发表日期: <span>2018-02-22  17:18:50</span></li>
+                
+                <li>最后编辑日期: <span>2018-02-23  13:56:26</span></li>
+                
+                <li class="post-category">
+                    文章分类:
+                    
+                    <a href="/categories/其他技术/">其他技术</a>
+                    
+                </li>
+                <li class="post-tags">
+                    文章标签:
+                    
+                    <a href="/tags/博客搭建/">博客搭建</a>
+                    
+                </li>
+                
+                <li> 版权声明: <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">
+知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议（CC BY-NC-ND 3.0）
+</a></li>
+                
+            </ul>
+            <div id="donate-wrap">
+                
+                
+                
+                <img src="http://ww1.sinaimg.cn/large/006vT9TSly1foky01e4vpj30qp0p5jsj.jpg" alt="支付宝付款" class="donate-img">
+                
+                <img src="http://ww1.sinaimg.cn/large/006vT9TSly1foky0c4zpsj30ry0tywgw.jpg" alt="微信付款" class="donate-img">
+                
+                
+            </div>
+        </div>
+    </article>
+    <div class="article-nav">
+        
+        
+        <a href="/2018/02/18/2018219949/" class="next-post fa">廖雪峰git学习笔记</a>
+        
+    </div>
+    
+    <div id="comments">
+        
+
+<script>
+  gitment.render(document.getElementById("comments"));
+</script>
+
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+    <footer id="footer">
+    
+    <div class="social">
+        
+        <a href="https://www.freecodecamp.cn/bitongchong" class="fa fa-free-code-camp" target="_blank" title="freecodecamp"></a>
+        
+        <a href="https://github.com/bitongchong" class="fa fa-github" target="_blank" title="Follow me~"></a>
+        
+    </div>
+    
+    <div>
+        
+        <a href="/" class="copyright-links">BIT C</a>&copy;2018 - 2018.All Rights
+        Reserved.
+    </div>
+    <p>Powered by <a href="https://hexo.io" class="copyright-links" target="_blank">Hexo</a> | Theme by <a
+                href="https://github.com/GeekaholicLin" class="copyright-links" target="_blank">GeekaholicLin</a>
+    </p>
+    
+    
+    <p>
+        <span id="busuanzi_container_site_uv" class="fa fa-bar-chart">
+        欢迎第<span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span>位小伙伴~
+        </span>
+    </p>
+    
+</footer>
+
+</div>
+    <ul id="tools">
+    <li class="totop-btn fa fa-angle-up"></li>
+    <li class="exchange-btn fa fa-exchange"></li>
+  
+    <li class="toc-btn fa fa-list-ul"></li>
+    
+    
+
+    
+    <li class="comment-btn fa fa-comments-o">
+        <a href="#comments" title="comments"></a>
+    </li>
+    
+</ul>
+<p id="process"></p>
+<div id="search-overlay">
+    <div class="search-area-wrap">
+        <div id="search-area">
+            <div class="input-wrap focus">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input id="search-input" autofocus autocomplete="off" type="text"
+                       placeholder="search this website..."/>
+            </div>
+            <ul id="search-result">
+                <li class="load-first"><i class="fa fa-spinner fa-pulse"></i></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言："><span class="toc-number">1.</span> <span class="toc-text">前言：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#搭建步骤："><span class="toc-number">2.</span> <span class="toc-text">搭建步骤：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#二、配置github"><span class="toc-number">2.1.</span> <span class="toc-text">二、配置github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、环境配置"><span class="toc-number">2.2.</span> <span class="toc-text">三、环境配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、网站代码以及设置"><span class="toc-number">2.3.</span> <span class="toc-text">四、网站代码以及设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五、博客网站配置信息"><span class="toc-number">2.4.</span> <span class="toc-text">五、博客网站配置信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#六、发表文章"><span class="toc-number">2.5.</span> <span class="toc-text">六、发表文章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#七、主题设置"><span class="toc-number">2.6.</span> <span class="toc-text">七、主题设置</span></a></li></ol></li></ol>
+
+
+
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+    //theme config datas
+    var copyrightObj = {};
+    copyrightObj.enable = 'true';
+    copyrightObj.triggerCopyLength = '200';
+    copyrightObj.appendText = '商业转载请联系作者获得授权,非商业转载请注明出处';
+    var leancloudObj = {};
+    leancloudObj.enable = 'true';
+    leancloudObj.className = 'Counter';
+    leancloudObj.limits = '10';
+</script>
+<script type="text/javascript">
+    var search = {};
+    var search_path = "search.xml";
+    if (!search_path) {
+        search_path = "search.xml";
+    }
+    search.path = "/" + search_path;
+    search.func =  _ajax.init();
+</script>
+<script src="/js/app.js"></script>
+
+
+</body>
+</html>
