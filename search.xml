@@ -8,7 +8,7 @@
         <content type="html"><![CDATA[<h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p>前几天突然心血来潮，想搭建一个自己的博客来保存自己的学习笔记，在借鉴了几篇文章后搭建成功 。</p>
 <p>下面是详细步骤以及遇到的一些坑。<br>最终效果：<a href="https://bitongchong.github.io/" target="_blank" rel="noopener">BITC’S BLOG</a></p>
 <p>参考文章：<a href="https://zhuanlan.zhihu.com/p/32263486" target="_blank" rel="noopener">免费快速搭建博客教程，Hexo&amp;GitHub</a></p>
-<h2 id="搭建步骤："><a href="#搭建步骤：" class="headerlink" title="搭建步骤："></a><strong>搭建步骤：</strong></h2><p>###一、获得个人网站域名（可选）###</p>
+<h2 id="搭建步骤："><a href="#搭建步骤：" class="headerlink" title="搭建步骤："></a><strong>搭建步骤：</strong></h2><p>###一、获得个人网站域名（可选）</p>
 <p>阿里云注册购买一个域名，并且将之解析。</p>
 <h3 id="二、配置github"><a href="#二、配置github" class="headerlink" title="二、配置github"></a>二、配置github</h3><ol>
 <li><p>登录GitHub</p>
