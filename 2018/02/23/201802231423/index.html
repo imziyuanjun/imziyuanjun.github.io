@@ -34,22 +34,10 @@
 <link rel="stylesheet" href="/css/pages/post.css">
 <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/css/thirdParty/highlight/github.css">
-<link rel="stylesheet" href="/css/pages/comments.css">
+<link rel="stylesheet" href="/.css">
 
     <!--script-->
 
-
-<script src="http://cdn1.lncld.net/static/js/3.2.1/av-min.js"></script>
-<script>
-  var appId = "T8Agkf9NzD89lQM1BnonkJ7Y-gzGzoHsz";
-  var appKey = "P47hlDvXycPSblIyK8utWB4q";
-  var region = "";
-  AV.init({
-    appId: appId,
-    appKey: appKey,
-    region: region
-  });
-</script>
 
 
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -57,28 +45,10 @@
 <!--<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>-->
 
 
-<script src="/js/thirdParty/gitment.browser.min.js"></script>
-<script>
-  var labels = "blog,gitment";
-  labels = labels.split(",");
-  var gitment = new Gitment({
-    id: window.location.pathname,
-    owner: "bitongchong",
-    repo: "bitongchong.github.io",
-    oauth: {
-      client_id: "000b7049a8642b44ad6b",
-      client_secret: "ed50a5c0c4c3782d54c68d3bd75e7394846f628e"
-    },
-    perPage: "20",
-    labels: labels
-  });
-</script>
-
     
     
 </head>
-<script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
-  <script>AV.initialize("T8Agkf9NzD89lQM1BnonkJ7Y-gzGzoHsz", "P47hlDvXycPSblIyK8utWB4q");</script>
+
 <body id="normal">
 <!--[if lte IE 8]>
 <style>
@@ -146,36 +116,19 @@ title="fork me" target="_blank">笔筒虫</a></p>
 
     
     
-<li class="widget widget-normal popular-posts" id="popular-posts">
-    <h3 class="fa fa-thermometer-3 widget-title">热门文章</h3>
-    <ul id="popular-content">
-        <li class="load-first"><i class="fa fa-spinner fa-pulse"></i></li>
-    </ul>
-</li>
-
     
     
 <li class="widget widget-normal tags">
   <h3 class="fa fa-tags widget-title">标签云</h3>
   <div class="tagcloud-content">
     
-      <a href="/tags/win10/" style="font-size: 0.14rem; color: #69c">win10</a> <a href="/tags/博客搭建/" style="font-size: 0.2rem; color: #0a407c">博客搭建</a> <a href="/tags/edx/" style="font-size: 0.14rem; color: #69c">edx</a> <a href="/tags/git学习/" style="font-size: 0.14rem; color: #69c">git学习</a>
+      <a href="/tags/博客搭建/" style="font-size: 0.2rem; color: #0a407c">博客搭建</a> <a href="/tags/win10/" style="font-size: 0.14rem; color: #69c">win10</a> <a href="/tags/edx/" style="font-size: 0.14rem; color: #69c">edx</a> <a href="/tags/git学习/" style="font-size: 0.14rem; color: #69c">git学习</a>
   </div>
 </li>
 
 
     
     
-    
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">�����Ŀ</h3>
-    <div class="widget">
-      <ul class="popularlist">
-      </ul>
-    </div>
-  </div>
-
     
 </ul>
 
@@ -213,12 +166,6 @@ title="fork me" target="_blank">笔筒虫</a></p>
         <span class="date-meta ">2018/02/23</span>
     </span>
     
-    
-    <span class="fa-wrap">
-            <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="关于 hexo d 报错解决办法"
-              data-leadcloud-url="/2018/02/23/201802231423/"><i class="fa fa-spinner fa-spin"></i></span>
-    </span>
     
     
 </div>
@@ -346,10 +293,6 @@ title="fork me" target="_blank">笔筒虫</a></p>
     
 
     
-    <li class="comment-btn fa fa-comments-o">
-        <a href="#comments" title="comments"></a>
-    </li>
-    
 </ul>
 <p id="process"></p>
 <div id="search-overlay">
@@ -380,7 +323,7 @@ title="fork me" target="_blank">笔筒虫</a></p>
     copyrightObj.triggerCopyLength = '200';
     copyrightObj.appendText = '商业转载请联系作者获得授权,非商业转载请注明出处';
     var leancloudObj = {};
-    leancloudObj.enable = 'true';
+    leancloudObj.enable = 'false';
     leancloudObj.className = 'Counter';
     leancloudObj.limits = '10';
 </script>
@@ -394,76 +337,6 @@ title="fork me" target="_blank">笔筒虫</a></p>
     search.func =  _ajax.init();
 </script>
 <script src="/js/app.js"></script>
-<!--page counter part-->
-<script>
-function addCount (Counter) {
-        url=$('.article-date').attr('href').trim();
-        title = $('.article-title').text().trim();
-        var query=new AV.Query(Counter);
-        //use url as unique idnetfication
-        query.equalTo("url",url);
-        query.find({
-            success: function(results){
-                if(results.length>0)
-                {
-                    var counter=results[0];
-                    counter.fetchWhenSave(true); //get recent result
-                    counter.increment("time");
-                    counter.save();
-                }
-                else
-                {
-                    var newcounter=new Counter();
-                    newcounter.set("title",title);
-                    newcounter.set("url",url);
-                    newcounter.set("time",1);
-                    newcounter.save(null,{
-                        success: function(newcounter){
-                        //alert('New object created');
-                        },
-                        error: function(newcounter,error){
-                        alert('Failed to create');
-                        }
-                        });
-                }
-            },
-            error: function(error){
-                //find null is not a error
-                alert('Error:'+error.code+" "+error.message);
-            }
-        });
-}
-$(function(){
-        var Counter=AV.Object.extend("Counter");
-        //only increse visit counting when intering a page
-        if ($('.article-title').length == 1)
-           addCount(Counter);
-        var query=new AV.Query(Counter);
-        query.descending("time");
-        // the sum of popular posts
-        query.limit(10); 
-        query.find({
-            success: function(results){
-                    for(var i=0;i<results.length;i++)    
-                    {
-                        var counter=results[i];
-                        title=counter.get("title");
-                        url=counter.get("url");
-                        time=counter.get("time");
-                        // add to the popularlist widget
-                        showcontent=title+" ("+time+")";
-                        //notice the "" in href
-                        $('.popularlist').append('<li><a href="'+url+'">'+showcontent+'</a></li>');
-                    }
-                },
-            error: function(error){
-                alert("Error:"+error.code+" "+error.message);
-            }
-            }
-        )
-        });
-</script>
-
 
 </body>
 </html>
