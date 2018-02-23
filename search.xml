@@ -126,7 +126,7 @@
     <entry>
         <title><![CDATA[hexo+github搭建博客]]></title>
         <url>https://bitongchong.github.io/2018/02/22/20180223/</url>
-        <content type="html"><![CDATA[<p><img src="http://ww1.sinaimg.cn/large/006vT9TSgy1foqhzy47qhj30sd0gs76j.jpg" alt=""></p>
+        <content type="html"><![CDATA[<p><img src="http://ww1.sinaimg.cn/large/006vT9TSgy1foqi4i1yauj30di07laaj.jpg" alt=""></p>
 <h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p>前几天突然心血来潮，想搭建一个自己的博客来保存自己的学习笔记，在借鉴了几篇文章后搭建成功 。</p>
 <p>下面是详细步骤以及遇到的一些坑。<br>最终效果：<a href="https://bitongchong.github.io/">BITC’S BLOG</a></p>
 <p>参考文章：<a href="https://zhuanlan.zhihu.com/p/32263486" target="_blank" rel="noopener">免费快速搭建博客教程，Hexo&amp;GitHub</a></p>
