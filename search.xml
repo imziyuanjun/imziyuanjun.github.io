@@ -3,257 +3,8 @@
     
     
     <entry>
-        <title><![CDATA[win10操作小技巧（逐渐补充）]]></title>
-        <url>https://bitongchong.github.io/2018/02/23/20182231501/</url>
-        <content type="html"><![CDATA[<p><img src="http://ww1.sinaimg.cn/large/006vT9TSgy1foqhxkoi0jj318g0xctwb.jpg" alt="windows"></p>
-<p>Ctrl+z撤销操作</p>
-<p>Ctrl+r回复操作</p>
-<p>win+ctrl+d新建虚拟桌面</p>
-]]></content>
-        
-        <categories>
-            
-            <category> win10操作 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> win10 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-        <title><![CDATA[关于在Ubuntu16.04上部署open-edx-ginkgo的流程与注意事项]]></title>
-        <url>https://bitongchong.github.io/2018/02/23/20182231452/</url>
-        <content type="html"><![CDATA[<h1 id="关于在Ubuntu16-04上部署open-edx-ginkgo的流程与注意事项"><a href="#关于在Ubuntu16-04上部署open-edx-ginkgo的流程与注意事项" class="headerlink" title="关于在Ubuntu16.04上部署open-edx-ginkgo的流程与注意事项"></a><strong>关于在Ubuntu16.04上部署open-edx-ginkgo的流程与注意事项</strong></h1><p>现在网上很多关于edx框架安装的教程都有很多坑，对新手极其不友好。</p>
-<p>按照他们的流程弄可能会走很多弯路，比如：直接用官方的流程网速奇慢，有些task要么超时、要么找不到安装包、有的直接报错等。</p>
-<p>后面看其他博客的时候才知道这样安装的成功率很低很低，因为网络原因（那堵墙）。于是打算换一种方式部署。</p>
-<p>正好，种瓜和zen这两位大佬在edx交流群里面制作出了open edx最新版的镜像，测试了一下，可以正常运行，下面是安装的详细流程（适用人群：初次接触edx框架的新手）。</p>
-<h1 id="O-前提准备："><a href="#O-前提准备：" class="headerlink" title="Ø 前提准备："></a>Ø 前提准备：</h1><ol>
-<li>VMware10或者其他版本</li>
-<li>open-edx-ginkgo镜像</li>
-<li>一台内存4G以上的PC</li>
-<li>（可选）Ubuntu 16.04</li>
-</ol>
-<h1 id="O-安装流程："><a href="#O-安装流程：" class="headerlink" title="Ø 安装流程："></a>Ø 安装流程：</h1><ol>
-<li><p>首先<strong>确保电脑内存有4G以上</strong>，因为4G内存是ginkgo正常部署运行的最低标准。最好4G以上，不够的可以在淘宝上买一根内存条，因为之前我用4G内存的电脑操作卡到心态爆炸。</p>
-</li>
-<li><p>安装VMware10，具体流程参考这个链接（*注解链接1），这个很简单，没什么坑，激活码在群文件里有。</p>
-</li>
-<li><p>下载open-edx-ginkgo的ova文件，下载链接（*注解链接2，两种下载方式都可以）。</p>
-</li>
-<li><p>载入镜像文件（按照图片流程操作）：</p>
-</li>
-</ol>
-<p>（↓下载好后直接点击文件——&gt;打开）</p>
-<p> <img src="http://img.blog.csdn.net/20180122233956784?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMTg2NTcxNzU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="img"></p>
-<p>（↓找到你下载的镜像文件）</p>
-<p>​    <img src="http://img.blog.csdn.net/20180122234010892?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMTg2NTcxNzU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="img"></p>
-<p>（↓点击打开后导入虚拟机，存储路径就是以后这台虚拟机的运行路径，以后涉及到这台Ubuntu的所有操作都在这个文件夹下面执行）</p>
-<p><img src="http://img.blog.csdn.net/20180122234025396?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMTg2NTcxNzU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="img"></p>
-<p>（↓完成后直接导入，这个过程有点长，等就是）</p>
-<p> <img src="http://img.blog.csdn.net/20180122234036497?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMTg2NTcxNzU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="img"></p>
-<p>（↓完成之后在我的计算机那儿会多一个虚拟机，到时候直接点击开启此虚拟机）</p>
-<p> <img src="http://img.blog.csdn.net/20180122234048443?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMTg2NTcxNzU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="img"></p>
-<p>（↓在打开后会是一个登陆界面，直接输入账号密码就好。这个时候可能会出现输入账号时不显示的问题，这个不用管，以后运行就不会出现了。密码输入是不会显示的，输入完成后直接回车）</p>
-<p>​       <img src="http://img.blog.csdn.net/20180122234100812?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMTg2NTcxNzU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="img"></p>
-<p>（↓登陆成功后是这个界面，输入命令  ifconfig -a  ，找到如图所示的IP地址。这个时候只要你的Ubuntu连上了网络的，你就可以在局域网内通过输入这个IP地址访问这个网站了。）</p>
-<p><img src="http://img.blog.csdn.net/20180122234112667?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMTg2NTcxNzU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="img"></p>
-<p>（↓比如我的虚拟机IP为192.168.253.123，在win10的浏览器里输入后就可以直接访问预览了）</p>
-<p> <img src="http://img.blog.csdn.net/20180122234124088?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMTg2NTcxNzU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="img"></p>
-<ol>
-<li><p>到这儿框架就安装好了。</p>
-<p><img src="http://img.blog.csdn.net/20180122234139973?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMTg2NTcxNzU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="img"></p>
-</li>
-</ol>
-<h1 id="O-相关注意事项："><a href="#O-相关注意事项：" class="headerlink" title="Ø 相关注意事项："></a>Ø 相关注意事项：</h1><p>1.硬件配置 1CPU/<strong>4G RAM</strong>/500G HD</p>
-<p>2.Ubuntu用户 <strong>edustack</strong>，密码<strong>edustack.org</strong></p>
-<p>3.没有生成随机密码，各种系统服务都使用默认密码。</p>
-<p>4.这个镜像是Ubuntu服务器版本，也就是<strong>没有图形界面（GUI）</strong>的。后面如果要对Linux和Python进行深入学习的话，可以安装一个桌面版本的Ubuntu，下载地址网上一大堆。安装流程在（*注解链接3），可以去看一看。</p>
-<h1 id="O-注解链接："><a href="#O-注解链接：" class="headerlink" title="Ø 注解链接："></a>Ø 注解链接：</h1><p>链接1：<a href="https://jingyan.baidu.com/article/9c69d48f488f6813c9024e99.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/9c69d48f488f6813c9024e99.html</a></p>
-<p>链接2：</p>
-<p><a href="http://202.196.166.180/downloads/%E5%AE%9E%E9%AA%8C%E8%BD%AF%E4%BB%B6/%E9%95%9C%E5%83%8F/edustack-ginkgo2.ova" target="_blank" rel="noopener">http://202.196.166.180/downloads/%E5%AE%9E%E9%AA%8C%E8%BD%AF%E4%BB%B6/%E9%95%9C%E5%83%8F/edustack-ginkgo2.ova</a></p>
-<p>百度网盘  <a href="https://pan.baidu.com/s/1qZ8QIsO" target="_blank" rel="noopener">https://pan.baidu.com/s/1qZ8QIsO</a> 密码：fxaz</p>
-<p>链接3：<a href="https://jingyan.baidu.com/article/14bd256e0ca52ebb6d26129c.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/14bd256e0ca52ebb6d26129c.html</a></p>
-<p>关于open-edx更多更详细的内容，推荐大家到这里去看看：<a href="https://www.edustack.org/" target="_blank" rel="noopener">https://www.edustack.org/</a></p>
-]]></content>
-        
-        <categories>
-            
-            <category> open edx框架 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> edx </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-        <title><![CDATA[关于 hexo d 报错解决办法]]></title>
-        <url>https://bitongchong.github.io/2018/02/23/201802231423/</url>
-        <content type="html"><![CDATA[<p><img src="http://ww1.sinaimg.cn/large/006vT9TSgy1foqi2af9abj30go09bjss.jpg" alt=""></p>
-<h1 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h1><p>今天更新博客时突然发现更新失败，错误信息如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">nothing to commit, working tree clean</span><br><span class="line">fatal: &apos;http：//www.github.com/bitongchong/bitongchong.github.io.git&apos; does not appear to be a git repository</span><br><span class="line">fatal: Could not read from remote repository.</span><br><span class="line">Please make sure you have the correct access rights and the repository exists.</span><br><span class="line">FATAL Something&apos;s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html</span><br><span class="line">Error: fatal: &apos;http：//www.github.com/bitongchong/bitongchong.github.io.git&apos; does not appear to be a git repository</span><br><span class="line">fatal: Could not read from remote repository.</span><br></pre></td></tr></table></figure>
-<h1 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: http：//www.github.com/bitongchong/bitongchong.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<p>修改为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: ssh://git@github.com/bitongchong/bitongchong.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-]]></content>
-        
-        <categories>
-            
-            <category> 其他技术 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 博客搭建 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-        <title><![CDATA[hexo+github搭建博客]]></title>
-        <url>https://bitongchong.github.io/2018/02/22/20180223/</url>
-        <content type="html"><![CDATA[<p><img src="http://ww1.sinaimg.cn/large/006vT9TSgy1foqi4i1yauj30di07laaj.jpg" alt=""></p>
-<h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p>前几天突然心血来潮，想搭建一个自己的博客来保存自己的学习笔记，在借鉴了几篇文章后搭建成功 。</p>
-<p>下面是详细步骤以及遇到的一些坑。<br>最终效果：<a href="https://bitongchong.github.io/">BITC’S BLOG</a></p>
-<p>参考文章：<a href="https://zhuanlan.zhihu.com/p/32263486" target="_blank" rel="noopener">免费快速搭建博客教程，Hexo&amp;GitHub</a></p>
-<h2 id="搭建步骤："><a href="#搭建步骤：" class="headerlink" title="搭建步骤："></a><strong>搭建步骤：</strong></h2><h3 id="一、获得个人网站域名（可选）"><a href="#一、获得个人网站域名（可选）" class="headerlink" title="一、获得个人网站域名（可选）"></a>一、获得个人网站域名（可选）</h3><p>阿里云注册购买一个域名，并且将之解析。</p>
-<h3 id="二、配置github"><a href="#二、配置github" class="headerlink" title="二、配置github"></a>二、配置github</h3><ol>
-<li><p>登录GitHub</p>
-</li>
-<li><p>保留Username</p>
-</li>
-<li><p>新建repositories</p>
-</li>
-<li><p>Repository name （填自己的名字） <strong><a href="http://yourname.github.io" target="_blank" rel="noopener">http://yourname.github.io</a></strong>(yourname与你的注册用户名一致,这个就是你博客的域名了。例如，我的域名是<a href="https://link.zhihu.com/?target=http%3A//github.com/wuxingggg" target="_blank" rel="noopener">http://github.com/bitongchong</a>，就填入<a href="http://bitongchong.github.io">http://bitongchong.github.io</a>)</p>
-</li>
-</ol>
-<h3 id="三、环境配置"><a href="#三、环境配置" class="headerlink" title="三、环境配置"></a>三、环境配置</h3><ol>
-<li><p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">安装Node.js</a></p>
-</li>
-<li><p><a href="https://github.com/waylau/git-for-win" target="_blank" rel="noopener">安装Git</a></p>
-</li>
-<li><p>安装完成后，在开始菜单里找到“Git”-&gt;“Git Bash”，进入</p>
-</li>
-<li><p>$ git config –global user.name “username”</p>
-</li>
-<li><p>$ git config –global user.email “xxx”</p>
-</li>
-<li><p>cmd中输入npm install -g hexo-cli（管理员权限）</p>
-</li>
-<li><p>(npm在你安装Node.js时就安装了)这个过程会比较久，如果出现WARN错误可以忽略。我记得当时，每次都会出现说有一个依赖包已经不更新，这个不影响。</p>
-<p>注：4、5是是两个短横线；username和xxx都是随意设置；引号需要添加</p>
-</li>
-</ol>
-<h3 id="四、网站代码以及设置"><a href="#四、网站代码以及设置" class="headerlink" title="四、网站代码以及设置"></a>四、网站代码以及设置</h3><ol>
-<li>自己在C盘创建一个test文件夹，cmd内cd进入test文件夹（管理员权限！一定得有）</li>
-<li>输入hexo init blog（忽视WARNING）</li>
-</ol>
-<ul>
-<li>_config.yml，网站的 配置 信息，在此配置大部分参数。</li>
-<li>source，资源文件夹是存放用户资源的地方。除 <em>posts 文件夹之外，开头命名为</em> (下划线)的文件 / 文件夹和隐藏的文件将会被忽略。Markdown 和 HTML 文件会被解析并放到 public 文件夹，而其他文件会被拷贝过去。</li>
-<li>themes，主题文件夹。Hexo 会根据主题来生成静态页面。</li>
-</ul>
-<ol>
-<li>提示Start blogging with Hexo，安装成功</li>
-<li>文件夹中自带一篇文章“Hello World”</li>
-<li>命令行进入blog目录下</li>
-<li>输入hexo g，生存静态文件</li>
-<li>输入hexo s，启动服务器。默认情况下，访问网址为： <a href="https://link.zhihu.com/?target=http%3A//localhost%3A4000/" target="_blank" rel="noopener">http://localhost:4000/</a></li>
-<li>重新打开CMD，输入：ssh-keygen -t rsa -C “Github的注册邮箱地址”</li>
-</ol>
-<p>一直Enter过来，得到信息：<br>Your public key has been saved in /c/Users/user/.ssh/id_rsa.pub.</p>
-<ol>
-<li><p>找到该文件，打开（sublime text），Ctrl + a复制里面的所有内容，然后进入Sign in to GitHub：<a href="https://link.zhihu.com/?target=https%3A//github.com/settings/ssh" target="_blank" rel="noopener">https://github.com/settings/ssh</a></p>
-</li>
-<li><p>New SSH key ——Title：blog —— Key：输入刚才复制的—— Add SSH key</p>
-</li>
-</ol>
-<h3 id="五、博客网站配置信息"><a href="#五、博客网站配置信息" class="headerlink" title="五、博客网站配置信息"></a>五、博客网站配置信息</h3><ol>
-<li>进入blog网站，用sublime打开_config.yml文件（博客基本配置信息），修改参数</li>
-<li><strong>每个参数的：后都要加一个空格</strong></li>
-<li>hexo框架的blog基础信息，按照自己设置就行</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title: BITC&apos;BLOG</span><br><span class="line">subtitle: DO YOUR WORK</span><br><span class="line">description: BIJI</span><br><span class="line">author: BITC</span><br><span class="line">language: zh-CN</span><br><span class="line">timezone: Asia/Shanghai</span><br></pre></td></tr></table></figure>
-<p>4.部署服务器的相关配置信息，只需要修改repo部分，username设置为你的username</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy: </span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/username/username.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<p>6.各类主题的配置信息，要在主题文件夹内的_config.yml上进行配置！</p>
-<h3 id="六、发表文章"><a href="#六、发表文章" class="headerlink" title="六、发表文章"></a>六、发表文章</h3><ol>
-<li>进入blog文件夹下，输入hexo new “Hello blog”</li>
-<li>打开info中的地址，打开文件。</li>
-<li>文章内容采用Markdown语法进行编辑，需要用相关软件才能打开这个文件</li>
-<li><a href="http://note.youdao.com/iyoudao/?p=2411&amp;vendor=unsilent14" target="_blank" rel="noopener">Markdown编辑使用说明</a></li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hello blog</span><br><span class="line">date: </span><br><span class="line">tags: 测试</span><br><span class="line">---</span><br><span class="line">测试文章，欢迎关注作者博客: https://wuxingggg.github.io/</span><br><span class="line">虽然啥子都没有，以后慢慢补充</span><br></pre></td></tr></table></figure>
-<p>6.执行以下步骤</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">C:\test\blog</span><br><span class="line">$ hexo clean</span><br><span class="line">INFO  Deleted database.</span><br><span class="line">INFO  Deleted public folder.</span><br><span class="line"></span><br><span class="line">C:\test\blog</span><br><span class="line">$ hexo generate</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Files loaded in 1.48 s</span><br><span class="line">...</span><br><span class="line">INFO  29 files generated in 4.27 s</span><br><span class="line"></span><br><span class="line">C:\test\blog</span><br><span class="line">$ hexo server</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
-<p>7.<a href="https://link.zhihu.com/?target=http%3A//localhost%3A4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 打开后检查，没问题后部署到服务器上</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">C:\test\blog</span><br><span class="line">$ hexo deploy</span><br><span class="line">INFO  Deploying: git</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>其中，可能会出现github登录界面，正常填写就行</p>
-</li>
-<li><p>hexo deploy 后,出现 error deployer not found:git 的错误，输入以下代码</p>
-</li>
-<li><ul>
-<li>npm install hexo-deployer-git –save</li>
-<li>再次hexo deploy</li>
-</ul>
-</li>
-</ul>
-<h3 id="七、主题设置"><a href="#七、主题设置" class="headerlink" title="七、主题设置"></a>七、主题设置</h3><p>主题设置中，最好玩的就是尝试各式各样的主题啦~</p>
-<p><a href="https://link.zhihu.com/?target=https%3A//hexo.io/themes/" target="_blank" rel="noopener">官方hexo主题大全</a>，里面有许多主题都能尝试一下。</p>
-<p>在这里推荐几个主题：</p>
-<ul>
-<li><a href="https://link.zhihu.com/?target=http%3A//theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">next官网</a></li>
-<li><a href="https://link.zhihu.com/?target=https%3A//mt.viosey.com/" target="_blank" rel="noopener">Material官网</a>，<a href="https://link.zhihu.com/?target=https%3A//github.com/viosey/hexo-theme-material/" target="_blank" rel="noopener">Git</a></li>
-</ul>
-<ol>
-<li>主题配置，首先要下载主题，到相应的Git链接，比如，<a href="https://link.zhihu.com/?target=https%3A//github.com/viosey/hexo-theme-material/releases/tag/1.4.0" target="_blank" rel="noopener">Material</a>下载Source code (zip)</li>
-<li>下载完以后将文件解压缩后放到blog中的themes文件夹中</li>
-<li>修改主题文件夹名称，将其改为 material 。 然后打开 站点配置文件，找到 theme 字段，并将其值更改为 material</li>
-<li>手动将 material 文件夹中的 _config.template.yaml 复制一份并重命名为 _config.yaml</li>
-<li>接下来，打开主题相应的博客中的文档说明，对比“主题”中的_config.yaml，针对自己需要的功能进行相关设置</li>
-<li>有关设置中的图片，统一放到主题文件夹内\source\img。在设置中，用”/img/xigua.jpg”类似格式进行图片设置。</li>
-<li>设置时切记 : 后面要加一个空格。</li>
-<li>最后再重新进行一次，hexo clean,hexo g,hexo s,hexo deploy 整个博客就完成主题修改啦</li>
-</ol>
-<h3 id="八、其他问题"><a href="#八、其他问题" class="headerlink" title="八、其他问题"></a>八、其他问题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;</span><br><span class="line">url: https://yoursite.com</span><br><span class="line">root: /</span><br><span class="line">permalink: :year/:month/:day/:subtitle/</span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure>
-<p>在配置文件中，这一栏需要改为自己的网址，否则会出现搜索功能不能使用等问题。</p>
-<p>比如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;</span><br><span class="line">url: https://bitongchong.github.io</span><br><span class="line">root: /</span><br><span class="line">permalink: :year/:month/:day/:subtitle/</span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure>
-]]></content>
-        
-        <categories>
-            
-            <category> 其他技术 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 博客搭建 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
         <title><![CDATA[廖雪峰git学习笔记]]></title>
-        <url>https://bitongchong.github.io/2018/02/18/2018219949/</url>
+        <url>https://imziyuanjun.github.io/2018/02/25/2018219949/</url>
         <content type="html"><![CDATA[<h2 id="Git介绍"><a href="#Git介绍" class="headerlink" title="Git介绍"></a>Git介绍</h2><ul>
 <li>Git是分布式版本控制系统</li>
 <li>集中式VS分布式，SVN VS Git<br>1）SVN和Git主要的区别在于历史版本维护的位置<br>2）这两个工具主要的区别在于历史版本维护的位置Git本地仓库包含代码库还有历史库，在本地的环境开发就可以记录历史而SVN的历史库存在于中央仓库，每次对比与提交代码都必须连接到中央仓库才能进行。<br>3）这样的好处在于：<ul>
@@ -363,6 +114,255 @@
         <tags>
             
             <tag> git学习 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+        <title><![CDATA[关于在Ubuntu16.04上部署open-edx-ginkgo的流程与注意事项]]></title>
+        <url>https://imziyuanjun.github.io/2018/02/25/20182231452/</url>
+        <content type="html"><![CDATA[<h1 id="关于在Ubuntu16-04上部署open-edx-ginkgo的流程与注意事项"><a href="#关于在Ubuntu16-04上部署open-edx-ginkgo的流程与注意事项" class="headerlink" title="关于在Ubuntu16.04上部署open-edx-ginkgo的流程与注意事项"></a><strong>关于在Ubuntu16.04上部署open-edx-ginkgo的流程与注意事项</strong></h1><p>现在网上很多关于edx框架安装的教程都有很多坑，对新手极其不友好。</p>
+<p>按照他们的流程弄可能会走很多弯路，比如：直接用官方的流程网速奇慢，有些task要么超时、要么找不到安装包、有的直接报错等。</p>
+<p>后面看其他博客的时候才知道这样安装的成功率很低很低，因为网络原因（那堵墙）。于是打算换一种方式部署。</p>
+<p>正好，种瓜和zen这两位大佬在edx交流群里面制作出了open edx最新版的镜像，测试了一下，可以正常运行，下面是安装的详细流程（适用人群：初次接触edx框架的新手）。</p>
+<h1 id="O-前提准备："><a href="#O-前提准备：" class="headerlink" title="Ø 前提准备："></a>Ø 前提准备：</h1><ol>
+<li>VMware10或者其他版本</li>
+<li>open-edx-ginkgo镜像</li>
+<li>一台内存4G以上的PC</li>
+<li>（可选）Ubuntu 16.04</li>
+</ol>
+<h1 id="O-安装流程："><a href="#O-安装流程：" class="headerlink" title="Ø 安装流程："></a>Ø 安装流程：</h1><ol>
+<li><p>首先<strong>确保电脑内存有4G以上</strong>，因为4G内存是ginkgo正常部署运行的最低标准。最好4G以上，不够的可以在淘宝上买一根内存条，因为之前我用4G内存的电脑操作卡到心态爆炸。</p>
+</li>
+<li><p>安装VMware10，具体流程参考这个链接（*注解链接1），这个很简单，没什么坑，激活码在群文件里有。</p>
+</li>
+<li><p>下载open-edx-ginkgo的ova文件，下载链接（*注解链接2，两种下载方式都可以）。</p>
+</li>
+<li><p>载入镜像文件（按照图片流程操作）：</p>
+</li>
+</ol>
+<p>（↓下载好后直接点击文件——&gt;打开）</p>
+<p> <img src="http://img.blog.csdn.net/20180122233956784?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMTg2NTcxNzU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="img"></p>
+<p>（↓找到你下载的镜像文件）</p>
+<p>​    <img src="http://img.blog.csdn.net/20180122234010892?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMTg2NTcxNzU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="img"></p>
+<p>（↓点击打开后导入虚拟机，存储路径就是以后这台虚拟机的运行路径，以后涉及到这台Ubuntu的所有操作都在这个文件夹下面执行）</p>
+<p><img src="http://img.blog.csdn.net/20180122234025396?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMTg2NTcxNzU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="img"></p>
+<p>（↓完成后直接导入，这个过程有点长，等就是）</p>
+<p> <img src="http://img.blog.csdn.net/20180122234036497?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMTg2NTcxNzU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="img"></p>
+<p>（↓完成之后在我的计算机那儿会多一个虚拟机，到时候直接点击开启此虚拟机）</p>
+<p> <img src="http://img.blog.csdn.net/20180122234048443?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMTg2NTcxNzU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="img"></p>
+<p>（↓在打开后会是一个登陆界面，直接输入账号密码就好。这个时候可能会出现输入账号时不显示的问题，这个不用管，以后运行就不会出现了。密码输入是不会显示的，输入完成后直接回车）</p>
+<p>​       <img src="http://img.blog.csdn.net/20180122234100812?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMTg2NTcxNzU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="img"></p>
+<p>（↓登陆成功后是这个界面，输入命令  ifconfig -a  ，找到如图所示的IP地址。这个时候只要你的Ubuntu连上了网络的，你就可以在局域网内通过输入这个IP地址访问这个网站了。）</p>
+<p><img src="http://img.blog.csdn.net/20180122234112667?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMTg2NTcxNzU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="img"></p>
+<p>（↓比如我的虚拟机IP为192.168.253.123，在win10的浏览器里输入后就可以直接访问预览了）</p>
+<p> <img src="http://img.blog.csdn.net/20180122234124088?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMTg2NTcxNzU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="img"></p>
+<ol>
+<li><p>到这儿框架就安装好了。</p>
+<p><img src="http://img.blog.csdn.net/20180122234139973?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMTg2NTcxNzU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="img"></p>
+</li>
+</ol>
+<h1 id="O-相关注意事项："><a href="#O-相关注意事项：" class="headerlink" title="Ø 相关注意事项："></a>Ø 相关注意事项：</h1><p>1.硬件配置 1CPU/<strong>4G RAM</strong>/500G HD</p>
+<p>2.Ubuntu用户 <strong>edustack</strong>，密码<strong>edustack.org</strong></p>
+<p>3.没有生成随机密码，各种系统服务都使用默认密码。</p>
+<p>4.这个镜像是Ubuntu服务器版本，也就是<strong>没有图形界面（GUI）</strong>的。后面如果要对Linux和Python进行深入学习的话，可以安装一个桌面版本的Ubuntu，下载地址网上一大堆。安装流程在（*注解链接3），可以去看一看。</p>
+<h1 id="O-注解链接："><a href="#O-注解链接：" class="headerlink" title="Ø 注解链接："></a>Ø 注解链接：</h1><p>链接1：<a href="https://jingyan.baidu.com/article/9c69d48f488f6813c9024e99.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/9c69d48f488f6813c9024e99.html</a></p>
+<p>链接2：</p>
+<p><a href="http://202.196.166.180/downloads/%E5%AE%9E%E9%AA%8C%E8%BD%AF%E4%BB%B6/%E9%95%9C%E5%83%8F/edustack-ginkgo2.ova" target="_blank" rel="noopener">http://202.196.166.180/downloads/%E5%AE%9E%E9%AA%8C%E8%BD%AF%E4%BB%B6/%E9%95%9C%E5%83%8F/edustack-ginkgo2.ova</a></p>
+<p>百度网盘  <a href="https://pan.baidu.com/s/1qZ8QIsO" target="_blank" rel="noopener">https://pan.baidu.com/s/1qZ8QIsO</a> 密码：fxaz</p>
+<p>链接3：<a href="https://jingyan.baidu.com/article/14bd256e0ca52ebb6d26129c.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/14bd256e0ca52ebb6d26129c.html</a></p>
+<p>关于open-edx更多更详细的内容，推荐大家到这里去看看：<a href="https://www.edustack.org/" target="_blank" rel="noopener">https://www.edustack.org/</a></p>
+]]></content>
+        
+        <categories>
+            
+            <category> open edx框架 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> edx </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+        <title><![CDATA[关于 hexo d 报错解决办法]]></title>
+        <url>https://imziyuanjun.github.io/2018/02/25/201802231423/</url>
+        <content type="html"><![CDATA[<p><img src="http://ww1.sinaimg.cn/large/006vT9TSgy1foqi2af9abj30go09bjss.jpg" alt=""></p>
+<h1 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h1><p>今天更新博客时突然发现更新失败，错误信息如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">nothing to commit, working tree clean</span><br><span class="line">fatal: &apos;http：//www.github.com/bitongchong/bitongchong.github.io.git&apos; does not appear to be a git repository</span><br><span class="line">fatal: Could not read from remote repository.</span><br><span class="line">Please make sure you have the correct access rights and the repository exists.</span><br><span class="line">FATAL Something&apos;s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html</span><br><span class="line">Error: fatal: &apos;http：//www.github.com/bitongchong/bitongchong.github.io.git&apos; does not appear to be a git repository</span><br><span class="line">fatal: Could not read from remote repository.</span><br></pre></td></tr></table></figure>
+<h1 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: http：//www.github.com/bitongchong/bitongchong.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>修改为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: ssh://git@github.com/bitongchong/bitongchong.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+]]></content>
+        
+        <categories>
+            
+            <category> 其他技术 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 博客搭建 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+        <title><![CDATA[win10操作小技巧（逐渐补充）]]></title>
+        <url>https://imziyuanjun.github.io/2018/02/25/20182231501/</url>
+        <content type="html"><![CDATA[<p><img src="http://ww1.sinaimg.cn/large/006vT9TSgy1foqhxkoi0jj318g0xctwb.jpg" alt="windows"></p>
+<p>Ctrl+z撤销操作</p>
+<p>Ctrl+r回复操作</p>
+<p>win+ctrl+d新建虚拟桌面</p>
+]]></content>
+        
+        <categories>
+            
+            <category> win10操作 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> win10 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+        <title><![CDATA[hexo+github搭建博客]]></title>
+        <url>https://imziyuanjun.github.io/2018/02/25/20180223/</url>
+        <content type="html"><![CDATA[<p><img src="http://ww1.sinaimg.cn/large/006vT9TSgy1foqi4i1yauj30di07laaj.jpg" alt=""></p>
+<h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p>前几天突然心血来潮，想搭建一个自己的博客来保存自己的学习笔记，在借鉴了几篇文章后搭建成功 。</p>
+<p>下面是详细步骤以及遇到的一些坑。<br>最终效果：<a href="https://bitongchong.github.io/" target="_blank" rel="noopener">BITC’S BLOG</a></p>
+<p>参考文章：<a href="https://zhuanlan.zhihu.com/p/32263486" target="_blank" rel="noopener">免费快速搭建博客教程，Hexo&amp;GitHub</a></p>
+<h2 id="搭建步骤："><a href="#搭建步骤：" class="headerlink" title="搭建步骤："></a><strong>搭建步骤：</strong></h2><h3 id="一、获得个人网站域名（可选）"><a href="#一、获得个人网站域名（可选）" class="headerlink" title="一、获得个人网站域名（可选）"></a>一、获得个人网站域名（可选）</h3><p>阿里云注册购买一个域名，并且将之解析。</p>
+<h3 id="二、配置github"><a href="#二、配置github" class="headerlink" title="二、配置github"></a>二、配置github</h3><ol>
+<li><p>登录GitHub</p>
+</li>
+<li><p>保留Username</p>
+</li>
+<li><p>新建repositories</p>
+</li>
+<li><p>Repository name （填自己的名字） <strong><a href="http://yourname.github.io" target="_blank" rel="noopener">http://yourname.github.io</a></strong>(yourname与你的注册用户名一致,这个就是你博客的域名了。例如，我的域名是<a href="https://link.zhihu.com/?target=http%3A//github.com/wuxingggg" target="_blank" rel="noopener">http://github.com/bitongchong</a>，就填入<a href="http://bitongchong.github.io" target="_blank" rel="noopener">http://bitongchong.github.io</a>)</p>
+</li>
+</ol>
+<h3 id="三、环境配置"><a href="#三、环境配置" class="headerlink" title="三、环境配置"></a>三、环境配置</h3><ol>
+<li><p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">安装Node.js</a></p>
+</li>
+<li><p><a href="https://github.com/waylau/git-for-win" target="_blank" rel="noopener">安装Git</a></p>
+</li>
+<li><p>安装完成后，在开始菜单里找到“Git”-&gt;“Git Bash”，进入</p>
+</li>
+<li><p>$ git config –global user.name “username”</p>
+</li>
+<li><p>$ git config –global user.email “xxx”</p>
+</li>
+<li><p>cmd中输入npm install -g hexo-cli（管理员权限）</p>
+</li>
+<li><p>(npm在你安装Node.js时就安装了)这个过程会比较久，如果出现WARN错误可以忽略。我记得当时，每次都会出现说有一个依赖包已经不更新，这个不影响。</p>
+<p>注：4、5是是两个短横线；username和xxx都是随意设置；引号需要添加</p>
+</li>
+</ol>
+<h3 id="四、网站代码以及设置"><a href="#四、网站代码以及设置" class="headerlink" title="四、网站代码以及设置"></a>四、网站代码以及设置</h3><ol>
+<li>自己在C盘创建一个test文件夹，cmd内cd进入test文件夹（管理员权限！一定得有）</li>
+<li>输入hexo init blog（忽视WARNING）</li>
+</ol>
+<ul>
+<li>_config.yml，网站的 配置 信息，在此配置大部分参数。</li>
+<li>source，资源文件夹是存放用户资源的地方。除 <em>posts 文件夹之外，开头命名为</em> (下划线)的文件 / 文件夹和隐藏的文件将会被忽略。Markdown 和 HTML 文件会被解析并放到 public 文件夹，而其他文件会被拷贝过去。</li>
+<li>themes，主题文件夹。Hexo 会根据主题来生成静态页面。</li>
+</ul>
+<ol>
+<li>提示Start blogging with Hexo，安装成功</li>
+<li>文件夹中自带一篇文章“Hello World”</li>
+<li>命令行进入blog目录下</li>
+<li>输入hexo g，生存静态文件</li>
+<li>输入hexo s，启动服务器。默认情况下，访问网址为： <a href="https://link.zhihu.com/?target=http%3A//localhost%3A4000/" target="_blank" rel="noopener">http://localhost:4000/</a></li>
+<li>重新打开CMD，输入：ssh-keygen -t rsa -C “Github的注册邮箱地址”</li>
+</ol>
+<p>一直Enter过来，得到信息：<br>Your public key has been saved in /c/Users/user/.ssh/id_rsa.pub.</p>
+<ol>
+<li><p>找到该文件，打开（sublime text），Ctrl + a复制里面的所有内容，然后进入Sign in to GitHub：<a href="https://link.zhihu.com/?target=https%3A//github.com/settings/ssh" target="_blank" rel="noopener">https://github.com/settings/ssh</a></p>
+</li>
+<li><p>New SSH key ——Title：blog —— Key：输入刚才复制的—— Add SSH key</p>
+</li>
+</ol>
+<h3 id="五、博客网站配置信息"><a href="#五、博客网站配置信息" class="headerlink" title="五、博客网站配置信息"></a>五、博客网站配置信息</h3><ol>
+<li>进入blog网站，用sublime打开_config.yml文件（博客基本配置信息），修改参数</li>
+<li><strong>每个参数的：后都要加一个空格</strong></li>
+<li>hexo框架的blog基础信息，按照自己设置就行</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title: BITC&apos;BLOG</span><br><span class="line">subtitle: DO YOUR WORK</span><br><span class="line">description: BIJI</span><br><span class="line">author: BITC</span><br><span class="line">language: zh-CN</span><br><span class="line">timezone: Asia/Shanghai</span><br></pre></td></tr></table></figure>
+<p>4.部署服务器的相关配置信息，只需要修改repo部分，username设置为你的username</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy: </span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/username/username.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>6.各类主题的配置信息，要在主题文件夹内的_config.yml上进行配置！</p>
+<h3 id="六、发表文章"><a href="#六、发表文章" class="headerlink" title="六、发表文章"></a>六、发表文章</h3><ol>
+<li>进入blog文件夹下，输入hexo new “Hello blog”</li>
+<li>打开info中的地址，打开文件。</li>
+<li>文章内容采用Markdown语法进行编辑，需要用相关软件才能打开这个文件</li>
+<li><a href="http://note.youdao.com/iyoudao/?p=2411&amp;vendor=unsilent14" target="_blank" rel="noopener">Markdown编辑使用说明</a></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hello blog</span><br><span class="line">date: </span><br><span class="line">tags: 测试</span><br><span class="line">---</span><br><span class="line">测试文章，欢迎关注作者博客: https://wuxingggg.github.io/</span><br><span class="line">虽然啥子都没有，以后慢慢补充</span><br></pre></td></tr></table></figure>
+<p>6.执行以下步骤</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">C:\test\blog</span><br><span class="line">$ hexo clean</span><br><span class="line">INFO  Deleted database.</span><br><span class="line">INFO  Deleted public folder.</span><br><span class="line"></span><br><span class="line">C:\test\blog</span><br><span class="line">$ hexo generate</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Files loaded in 1.48 s</span><br><span class="line">...</span><br><span class="line">INFO  29 files generated in 4.27 s</span><br><span class="line"></span><br><span class="line">C:\test\blog</span><br><span class="line">$ hexo server</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
+<p>7.<a href="https://link.zhihu.com/?target=http%3A//localhost%3A4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 打开后检查，没问题后部署到服务器上</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">C:\test\blog</span><br><span class="line">$ hexo deploy</span><br><span class="line">INFO  Deploying: git</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>其中，可能会出现github登录界面，正常填写就行</p>
+</li>
+<li><p>hexo deploy 后,出现 error deployer not found:git 的错误，输入以下代码</p>
+</li>
+<li><ul>
+<li>npm install hexo-deployer-git –save</li>
+<li>再次hexo deploy</li>
+</ul>
+</li>
+</ul>
+<h3 id="七、主题设置"><a href="#七、主题设置" class="headerlink" title="七、主题设置"></a>七、主题设置</h3><p>主题设置中，最好玩的就是尝试各式各样的主题啦~</p>
+<p><a href="https://link.zhihu.com/?target=https%3A//hexo.io/themes/" target="_blank" rel="noopener">官方hexo主题大全</a>，里面有许多主题都能尝试一下。</p>
+<p>在这里推荐几个主题：</p>
+<ul>
+<li><a href="https://link.zhihu.com/?target=http%3A//theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">next官网</a></li>
+<li><a href="https://link.zhihu.com/?target=https%3A//mt.viosey.com/" target="_blank" rel="noopener">Material官网</a>，<a href="https://link.zhihu.com/?target=https%3A//github.com/viosey/hexo-theme-material/" target="_blank" rel="noopener">Git</a></li>
+</ul>
+<ol>
+<li>主题配置，首先要下载主题，到相应的Git链接，比如，<a href="https://link.zhihu.com/?target=https%3A//github.com/viosey/hexo-theme-material/releases/tag/1.4.0" target="_blank" rel="noopener">Material</a>下载Source code (zip)</li>
+<li>下载完以后将文件解压缩后放到blog中的themes文件夹中</li>
+<li>修改主题文件夹名称，将其改为 material 。 然后打开 站点配置文件，找到 theme 字段，并将其值更改为 material</li>
+<li>手动将 material 文件夹中的 _config.template.yaml 复制一份并重命名为 _config.yaml</li>
+<li>接下来，打开主题相应的博客中的文档说明，对比“主题”中的_config.yaml，针对自己需要的功能进行相关设置</li>
+<li>有关设置中的图片，统一放到主题文件夹内\source\img。在设置中，用”/img/xigua.jpg”类似格式进行图片设置。</li>
+<li>设置时切记 : 后面要加一个空格。</li>
+<li>最后再重新进行一次，hexo clean,hexo g,hexo s,hexo deploy 整个博客就完成主题修改啦</li>
+</ol>
+<h3 id="八、其他问题"><a href="#八、其他问题" class="headerlink" title="八、其他问题"></a>八、其他问题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;</span><br><span class="line">url: https://yoursite.com</span><br><span class="line">root: /</span><br><span class="line">permalink: :year/:month/:day/:subtitle/</span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure>
+<p>在配置文件中，这一栏需要改为自己的网址，否则会出现搜索功能不能使用等问题。</p>
+<p>比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;</span><br><span class="line">url: https://bitongchong.github.io</span><br><span class="line">root: /</span><br><span class="line">permalink: :year/:month/:day/:subtitle/</span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure>
+]]></content>
+        
+        <categories>
+            
+            <category> 其他技术 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 博客搭建 </tag>
             
         </tags>
         
