@@ -22,7 +22,7 @@
 <meta name="verify" content=all />
     <!--Title-->
 
-<title>归档 | I&#39;m 资源君</title>
+<title>VM虚拟机不能联网的问题解决方案 | I&#39;m 资源君</title>
 
 <link rel="alternate" href="/atom.xml" title="I&#39;m 资源君" type="application/atom+xml">
 
@@ -31,9 +31,10 @@
 
     
 <link rel="stylesheet" href="/css/base.css">
-<link rel="stylesheet" href="/css/pages/archive.css">
+<link rel="stylesheet" href="/css/pages/post.css">
 <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/css/thirdParty/highlight/github.css">
+<link rel="stylesheet" href="/.css">
 
     <!--script-->
 
@@ -132,15 +133,16 @@ title="fork me" target="_blank">I'm 资源君</a></p>
 </ul>
 
 
-        
-<div id="main">
-  <div id="post-list">
-    <ul class="archives-post-list">
-        
-      <li class="post-items" _href="/2018/02/26/201802261621/">
-        <p class="info">2018</p>
-        <h2 class="post-item-title">VM虚拟机不能联网的问题解决方案</h2>
-          <div class="article-meta">
+        <div id="main">
+    <article id="post">
+        <div id="post-header">
+
+            <h1 id="VM虚拟机不能联网的问题解决方案">
+                
+                VM虚拟机不能联网的问题解决方案
+                
+            </h1>
+            <div class="article-meta">
     
     
     <span class="categories-meta fa-wrap">
@@ -161,250 +163,99 @@ title="fork me" target="_blank">I'm 资源君</a></p>
     
     <span class="fa-wrap">
         <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">02/26</span>
+        <span class="date-meta ">2018/02/26</span>
     </span>
     
     
     
 </div>
 
-      </li>
+            
+            
+        </div>
         
-      <li class="post-items" _href="/2018/02/26/201802261152/">
-        <p class="info">2018</p>
-        <h2 class="post-item-title">一台电脑实现push不同仓库到两个github账号</h2>
-          <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>GIT</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            git学习
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">02/26</span>
-    </span>
-    
-    
-    
-</div>
+        <div id="post-body">
+            <h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>虚拟机刚开始安装完成的时候，能够正常访问网络，结果后面突然显示网络断开连接，网上找了很多方案，无果。后面自己鼓弄的时候修复好了，方案如下。</p>
+<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">打开虚拟网络编辑器</span><br><span class="line"></span><br><span class="line">点击更改设置</span><br><span class="line"></span><br><span class="line">再点击左下角的恢复默认按钮</span><br><span class="line"></span><br><span class="line">出来提示</span><br><span class="line"></span><br><span class="line">点是</span><br><span class="line"></span><br><span class="line">修复完成</span><br></pre></td></tr></table></figure>
+<p>编辑中找到虚拟网络编辑器，找到如下界面，更改设置<img src="http://ww1.sinaimg.cn/large/006vT9TSgy1fotyi1sa9ij30ix063q4f.jpg" alt=""></p>
+<p>点击还原默认设置，选是，修复完成<img src="http://ww1.sinaimg.cn/large/006vT9TSgy1fotyh9l9kxj30jp0aemz9.jpg" alt=""></p>
+<h1 id="其他解决方案"><a href="#其他解决方案" class="headerlink" title="其他解决方案"></a>其他解决方案</h1><p>为了以后出现这种问题的时候有更多办法，我将其他解决方案附在下面：</p>
+<h3 id="首先看看主机的网络连接有几个，主要是看看有没有VMnet1、VMnet8两个虚拟机的网络连接（关键是VMnet8）"><a href="#首先看看主机的网络连接有几个，主要是看看有没有VMnet1、VMnet8两个虚拟机的网络连接（关键是VMnet8）" class="headerlink" title="首先看看主机的网络连接有几个，主要是看看有没有VMnet1、VMnet8两个虚拟机的网络连接（关键是VMnet8）"></a>首先看看主机的网络连接有几个，主要是看看有没有VMnet1、VMnet8两个虚拟机的网络连接（关键是VMnet8）</h3><p>对于那些使用完全安装版的虚拟机就不用考虑这些了，因为完全安装版的VM安装好后一般这两个连接就有了。但是有很多网友使用的是精简版、绿色版的虚拟机，那就要首先看看这里。因为绿色版的需要单独安装虚拟机的网络服务，安装一般在下载的虚拟机目录内，一般名字叫做“安装.bat”或者“intall.dat”，运行它。可能版本不同名称不太一样，安装时主要把NAT服务安装上去就行了。如果你想用其他方式则把其他方式安装上。</p>
+<p>另外，<strong>这里所有连接都不要设置Internet连接共享，NAT方式下虚拟机上网不需要设置共享</strong>。</p>
+<h3 id="看看虚拟机的网络连接设置的对不对"><a href="#看看虚拟机的网络连接设置的对不对" class="headerlink" title="看看虚拟机的网络连接设置的对不对"></a>看看虚拟机的网络连接设置的对不对</h3><p>一般没有其他特殊要求，设置为NAT即可。</p>
+<p>这两步好了后可以启动虚拟机试试了，要注意：<strong>在NAT方式下，虚拟机内本地连接不要自己设定IP，应该都是自动获取。</strong></p>
 
-      </li>
+        </div>
+        <div id="post-footer">
+            <div class="avatar" >
+                <img src="http://ww1.sinaimg.cn/large/006vT9TSly1foky6pf7lvj30dw0dwaaf.jpg" alt="avatar"/>
+                
+                
+                <a href="javascript:void(0)" class="donate fa">赠我一杯 &#128536;</a>
+                
+            </div>
+            <ul class="author-profile-section">
+                <li>
+                  
+                  作者:
+                  
+                    
+                    <a href="/about.html">资源君</a>
+                </li>
+                
+                <li>发表日期: <span>2018-02-26  17:08:00</span></li>
+                
+                <li>最后编辑日期: <span>2018-02-26  17:05:32</span></li>
+                
+                <li class="post-category">
+                    文章分类:
+                    
+                    <a href="/categories/虚拟机/">虚拟机</a>
+                    
+                </li>
+                <li class="post-tags">
+                    文章标签:
+                    
+                    <a href="/tags/虚拟机出错/">虚拟机出错</a>
+                    
+                </li>
+                
+                <li> 版权声明: <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">
+知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议（CC BY-NC-ND 3.0）
+</a></li>
+                
+            </ul>
+            <div id="donate-wrap">
+                
+                
+                
+                <img src="http://ww1.sinaimg.cn/large/006vT9TSly1foky01e4vpj30qp0p5jsj.jpg" alt="支付宝付款" class="donate-img">
+                
+                <img src="http://ww1.sinaimg.cn/large/006vT9TSly1foky0c4zpsj30ry0tywgw.jpg" alt="微信付款" class="donate-img">
+                
+                
+            </div>
+        </div>
+    </article>
+    <div class="article-nav">
         
-      <li class="post-items" _href="/2018/02/26/201802261053/">
-        <p class="info">2018</p>
-        <h2 class="post-item-title">绑定github上的博客到个人域名</h2>
-          <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>网站建设</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            博客搭建
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">02/26</span>
-    </span>
-    
-    
-    
-</div>
-
-      </li>
         
-      <li class="post-items" _href="/2018/02/25/2018219949/">
-        <p class="info">2018</p>
-        <h2 class="post-item-title">廖雪峰git学习笔记</h2>
-          <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>GIT</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            git学习
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">02/25</span>
-    </span>
-    
-    
-    
-</div>
-
-      </li>
+        <a href="/2018/02/26/201802261152/" class="next-post fa">一台电脑实现push不同仓库到两个github账号</a>
         
-      <li class="post-items" _href="/2018/02/25/20182231452/">
-        <p class="info">2018</p>
-        <h2 class="post-item-title">关于在Ubuntu16.04上部署open-edx-ginkgo的流程与注意事项</h2>
-          <div class="article-meta">
+    </div>
     
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>open edx框架</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            edx
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">02/25</span>
-    </span>
-    
-    
-    
-</div>
-
-      </li>
+    <div id="comments">
         
-      <li class="post-items" _href="/2018/02/25/201802231423/">
-        <p class="info">2018</p>
-        <h2 class="post-item-title">关于 hexo d 报错解决办法</h2>
-          <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>网站建设</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            博客搭建
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">02/25</span>
-    </span>
-    
-    
+
+<script>
+  gitment.render(document.getElementById("comments"));
+</script>
+
+
+
+    </div>
     
 </div>
-
-      </li>
-        
-      <li class="post-items" _href="/2018/02/25/20182231501/">
-        <p class="info">2018</p>
-        <h2 class="post-item-title">win10操作小技巧（逐渐补充）</h2>
-          <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>win10操作</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            win10
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">02/25</span>
-    </span>
-    
-    
-    
-</div>
-
-      </li>
-        
-      <li class="post-items" _href="/2018/02/25/20180223/">
-        <p class="info">2018</p>
-        <h2 class="post-item-title">hexo+github搭建博客</h2>
-          <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>网站建设</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            博客搭建
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">02/25</span>
-    </span>
-    
-    
-    
-</div>
-
-      </li>
-        
-    </ul>
-  </div>
-</div>
-
 
 
     </div>
@@ -439,6 +290,8 @@ title="fork me" target="_blank">I'm 资源君</a></p>
     <li class="totop-btn fa fa-angle-up"></li>
     <li class="exchange-btn fa fa-exchange"></li>
   
+    <li class="toc-btn fa fa-list-ul"></li>
+    
     
 
     
@@ -458,6 +311,8 @@ title="fork me" target="_blank">I'm 资源君</a></p>
         </div>
     </div>
 </div>
+
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#问题"><span class="toc-number">1.</span> <span class="toc-text">问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解决方案"><span class="toc-number">2.</span> <span class="toc-text">解决方案</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#其他解决方案"><span class="toc-number">3.</span> <span class="toc-text">其他解决方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#首先看看主机的网络连接有几个，主要是看看有没有VMnet1、VMnet8两个虚拟机的网络连接（关键是VMnet8）"><span class="toc-number">3.0.1.</span> <span class="toc-text">首先看看主机的网络连接有几个，主要是看看有没有VMnet1、VMnet8两个虚拟机的网络连接（关键是VMnet8）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#看看虚拟机的网络连接设置的对不对"><span class="toc-number">3.0.2.</span> <span class="toc-text">看看虚拟机的网络连接设置的对不对</span></a></li></ol></li></ol></li></ol>
 
 
 

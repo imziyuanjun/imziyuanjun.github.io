@@ -22,7 +22,7 @@
 <meta name="verify" content=all />
     <!--Title-->
 
-<title>归档 | I&#39;m 资源君</title>
+<title>绑定github上的博客到个人域名 | I&#39;m 资源君</title>
 
 <link rel="alternate" href="/atom.xml" title="I&#39;m 资源君" type="application/atom+xml">
 
@@ -31,9 +31,10 @@
 
     
 <link rel="stylesheet" href="/css/base.css">
-<link rel="stylesheet" href="/css/pages/archive.css">
+<link rel="stylesheet" href="/css/pages/post.css">
 <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/css/thirdParty/highlight/github.css">
+<link rel="stylesheet" href="/.css">
 
     <!--script-->
 
@@ -132,81 +133,16 @@ title="fork me" target="_blank">I'm 资源君</a></p>
 </ul>
 
 
-        
-<div id="main">
-  <div id="post-list">
-    <ul class="archives-post-list">
-        
-      <li class="post-items" _href="/2018/02/26/201802261621/">
-        <p class="info">2018</p>
-        <h2 class="post-item-title">VM虚拟机不能联网的问题解决方案</h2>
-          <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>虚拟机</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            虚拟机出错
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">02/26</span>
-    </span>
-    
-    
-    
-</div>
+        <div id="main">
+    <article id="post">
+        <div id="post-header">
 
-      </li>
-        
-      <li class="post-items" _href="/2018/02/26/201802261152/">
-        <p class="info">2018</p>
-        <h2 class="post-item-title">一台电脑实现push不同仓库到两个github账号</h2>
-          <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>GIT</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            git学习
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">02/26</span>
-    </span>
-    
-    
-    
-</div>
-
-      </li>
-        
-      <li class="post-items" _href="/2018/02/26/201802261053/">
-        <p class="info">2018</p>
-        <h2 class="post-item-title">绑定github上的博客到个人域名</h2>
-          <div class="article-meta">
+            <h1 id="绑定github上的博客到个人域名">
+                
+                绑定github上的博客到个人域名
+                
+            </h1>
+            <div class="article-meta">
     
     
     <span class="categories-meta fa-wrap">
@@ -227,184 +163,113 @@ title="fork me" target="_blank">I'm 资源君</a></p>
     
     <span class="fa-wrap">
         <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">02/26</span>
+        <span class="date-meta ">2018/02/26</span>
     </span>
     
     
     
 </div>
 
-      </li>
+            
+            
+        </div>
         
-      <li class="post-items" _href="/2018/02/25/2018219949/">
-        <p class="info">2018</p>
-        <h2 class="post-item-title">廖雪峰git学习笔记</h2>
-          <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>GIT</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            git学习
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">02/25</span>
-    </span>
-    
-    
-    
-</div>
+        <div id="post-body">
+            <h1 id="需求："><a href="#需求：" class="headerlink" title="需求："></a>需求：</h1><p>实现将托管在github上的个人博客绑定到万网域名的流程</p>
+<h1 id="流程："><a href="#流程：" class="headerlink" title="流程："></a>流程：</h1><p>1、购买域名（这里用的阿里云），备案(实名认证)</p>
+<p>2、在github根目录添加CNAME，内容为<a href="http://www.xxx.com(去掉http://)" target="_blank" rel="noopener">www.xxx.com(去掉http://)</a></p>
+<p><img src="http://ww1.sinaimg.cn/large/006vT9TSly1fotobpphyij30z70bqgm8.jpg" alt=""></p>
+<p><code>注:如果不添加www，域名访问时就不能加www，否则会出错</code></p>
+<p><code>如果是hexo搭建的，直接将文件存放在source文件夹下，hexo g &amp; hexo d，就能将文件上传到github根目录中</code></p>
+<p>3、点进项目文件夹，点击setting，向下滑，将你购买的域名填写在Custom domain中（去掉http://），点击save</p>
+<p><img src="http://ww1.sinaimg.cn/large/006vT9TSly1fotohov8udj30mx05qdi1.jpg" alt=""></p>
+<p>4、转到阿里云域名管理界面，点击解析</p>
+<p><img src="http://ww1.sinaimg.cn/large/006vT9TSly1foton3ekxrj317903fjsl.jpg" alt=""></p>
+<p>可以点击新手引导，直接填写网址</p>
+<p><img src="http://ww1.sinaimg.cn/large/006vT9TSly1fotona78nej30w50gw78u.jpg" alt=""></p>
+<p>填写的内容可以直接CMD去ping你的博客得到</p>
+<p><img src="http://ww1.sinaimg.cn/large/006vT9TSly1fotozkcqirj30xr07oq8t.jpg" alt=""></p>
+<p>也可以自己按需求配置</p>
+<p><img src="http://ww1.sinaimg.cn/large/006vT9TSly1fotonir94hj312t0hp0yh.jpg" alt=""></p>
+<p>配置完成后，就可以通过购买的域名访问你的github网站了</p>
+<p>注：关于记录类型的解释</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">A记录： 将域名指向一个IPv4地址（例如：8.8.8.8）</span><br><span class="line">CNAME：将域名指向另一个域名（例如www.qcloud.com）</span><br><span class="line">MX： 将域名指向邮件服务器地址</span><br><span class="line">TXT： 可任意填写，长度限制255，通常做SPF记录（反垃圾邮件）</span><br><span class="line">NS： 域名服务器记录，将子域名指定其他DNS服务器解析</span><br><span class="line">AAAA：将域名指向一个iPv6地址（例如：ff06:0:0:0:0:0:0:c3）</span><br><span class="line">SRV：记录提供特定服务的服务器（例如_xmpp-server._tcp）</span><br></pre></td></tr></table></figure>
+<p>关于主机类型记录的解释</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">www： 解析后的域名为www.qcloud.com。</span><br><span class="line">@： 直接解析主域名 qcloud.com。</span><br><span class="line">*： 泛解析，匹配其他所有域名 *.qcloud.com。</span><br><span class="line">mail： 将域名解析为mail.qcloud.com，通常用于解析邮箱服务器。</span><br><span class="line">二级域名： 如：abc.qcloud.com，填写abc。</span><br><span class="line">手机网站： 如：m.qcloud.com，填写m</span><br></pre></td></tr></table></figure>
 
-      </li>
+        </div>
+        <div id="post-footer">
+            <div class="avatar" >
+                <img src="http://ww1.sinaimg.cn/large/006vT9TSly1foky6pf7lvj30dw0dwaaf.jpg" alt="avatar"/>
+                
+                
+                <a href="javascript:void(0)" class="donate fa">赠我一杯 &#128536;</a>
+                
+            </div>
+            <ul class="author-profile-section">
+                <li>
+                  
+                  作者:
+                  
+                    
+                    <a href="/about.html">资源君</a>
+                </li>
+                
+                <li>发表日期: <span>2018-02-26  17:08:00</span></li>
+                
+                <li>最后编辑日期: <span>2018-02-26  11:36:19</span></li>
+                
+                <li class="post-category">
+                    文章分类:
+                    
+                    <a href="/categories/网站建设/">网站建设</a>
+                    
+                </li>
+                <li class="post-tags">
+                    文章标签:
+                    
+                    <a href="/tags/博客搭建/">博客搭建</a>
+                    
+                </li>
+                
+                <li> 版权声明: <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">
+知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议（CC BY-NC-ND 3.0）
+</a></li>
+                
+            </ul>
+            <div id="donate-wrap">
+                
+                
+                
+                <img src="http://ww1.sinaimg.cn/large/006vT9TSly1foky01e4vpj30qp0p5jsj.jpg" alt="支付宝付款" class="donate-img">
+                
+                <img src="http://ww1.sinaimg.cn/large/006vT9TSly1foky0c4zpsj30ry0tywgw.jpg" alt="微信付款" class="donate-img">
+                
+                
+            </div>
+        </div>
+    </article>
+    <div class="article-nav">
         
-      <li class="post-items" _href="/2018/02/25/20182231452/">
-        <p class="info">2018</p>
-        <h2 class="post-item-title">关于在Ubuntu16.04上部署open-edx-ginkgo的流程与注意事项</h2>
-          <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>open edx框架</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            edx
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">02/25</span>
-    </span>
-    
-    
-    
-</div>
-
-      </li>
+        <a href="/2018/02/26/201802261152/" class="pre-post fa fa-caret-left">一台电脑实现push不同仓库到两个github账号</a>
         
-      <li class="post-items" _href="/2018/02/25/201802231423/">
-        <p class="info">2018</p>
-        <h2 class="post-item-title">关于 hexo d 报错解决办法</h2>
-          <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>网站建设</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            博客搭建
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">02/25</span>
-    </span>
-    
-    
-    
-</div>
-
-      </li>
         
-      <li class="post-items" _href="/2018/02/25/20182231501/">
-        <p class="info">2018</p>
-        <h2 class="post-item-title">win10操作小技巧（逐渐补充）</h2>
-          <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>win10操作</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            win10
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">02/25</span>
-    </span>
-    
-    
-    
-</div>
-
-      </li>
+        <a href="/2018/02/25/2018219949/" class="next-post fa">廖雪峰git学习笔记</a>
         
-      <li class="post-items" _href="/2018/02/25/20180223/">
-        <p class="info">2018</p>
-        <h2 class="post-item-title">hexo+github搭建博客</h2>
-          <div class="article-meta">
+    </div>
     
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>网站建设</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            博客搭建
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">02/25</span>
-    </span>
-    
-    
-    
-</div>
-
-      </li>
+    <div id="comments">
         
-    </ul>
-  </div>
-</div>
 
+<script>
+  gitment.render(document.getElementById("comments"));
+</script>
+
+
+
+    </div>
+    
+</div>
 
 
     </div>
@@ -439,6 +304,8 @@ title="fork me" target="_blank">I'm 资源君</a></p>
     <li class="totop-btn fa fa-angle-up"></li>
     <li class="exchange-btn fa fa-exchange"></li>
   
+    <li class="toc-btn fa fa-list-ul"></li>
+    
     
 
     
@@ -458,6 +325,8 @@ title="fork me" target="_blank">I'm 资源君</a></p>
         </div>
     </div>
 </div>
+
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#需求："><span class="toc-number">1.</span> <span class="toc-text">需求：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#流程："><span class="toc-number">2.</span> <span class="toc-text">流程：</span></a></li></ol>
 
 
 
